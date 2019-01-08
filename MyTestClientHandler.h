@@ -13,7 +13,7 @@
 
 class MyTestClientHandler : public IClientHandler{
 public:
-    virtual void handleClient(int port);
+    virtual void handleClient(int socket);
 
 private:
     ISolver<string, string> *solver;
