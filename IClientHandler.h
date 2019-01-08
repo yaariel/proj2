@@ -9,7 +9,7 @@ using namespace std;
 
 class IClientHandler {
 public:
-    virtual void handleClient (int port) = 0;
+    virtual void handleClient (int socket) = 0;
 };
 
 
