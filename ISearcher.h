@@ -11,7 +11,9 @@ template <class solution, class T>
 
 class ISearcher {
 public:
+
     virtual solution search(ISearchable<T> searchable) = 0;
+
     virtual int getNumberOfNodesEvaluated() = 0;
 };
 

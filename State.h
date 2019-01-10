@@ -26,6 +26,7 @@ public:
 
     State<T> *getFather() {return *father;}
 
+    //overloading the operator instead of creating function called "Equal"
     bool operator==(State<T> another) {return (bool) current == another.current;}
 };
 

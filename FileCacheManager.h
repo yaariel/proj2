@@ -11,7 +11,7 @@
 
 using namespace std;
 
-
+//might changing to generics instead of strings, and having a converter so we could have the string's functionality
 class FileCacheManager : public ICacheManager <string, string>{
 
 private:

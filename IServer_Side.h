@@ -12,6 +12,7 @@ namespace IServer_Side {
     class IServer {
     public:
         virtual void open(int port, IClientHandler handler) = 0;
+
         virtual void stop() = 0;
     };
 }
