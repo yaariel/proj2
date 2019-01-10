@@ -64,7 +64,7 @@ void MyTestClientHandler::handleClient(int socket) {
                 }
 
             }
-            //add the 'reminder' to problem for next run
+            //add the 'remainder' to problem for next run
             if (check.length() > 0)
                 problem += check;
         }

@@ -2,13 +2,13 @@
 // Created by frieddv on 1/5/19.
 //
 
-#ifndef PROJ2_ISERVER_SIDE_H
-#define PROJ2_ISERVER_SIDE_H
+#ifndef PROJ2_ISERVER_H
+#define PROJ2_ISERVER_H
 
 #include "IClientHandler.h"
 
 
-namespace IServer_Side {
+namespace server_side {
     class IServer {
     public:
         virtual void open(int port, IClientHandler handler) = 0;
@@ -18,4 +18,4 @@ namespace IServer_Side {
 }
 
 
-#endif //PROJ2_ISERVER_SIDE_H
+#endif //PROJ2_ISERVER_H

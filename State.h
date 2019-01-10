@@ -8,6 +8,7 @@
 template <class T>
 
 class State {
+private:
     T current;
     double cost;
     State<T> *father;
@@ -27,7 +28,7 @@ public:
     State<T> *getFather() {return *father;}
 
     //overloading the operator instead of creating function called "Equal"
-    bool operator==(State<T> another) {return (bool) current == another.current;}
+    bool operator==(State<T> another) {return (getState() == another.getState());}
 };
 
 

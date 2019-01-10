@@ -39,7 +39,7 @@ public:
         records[problem] = solution;
     }
 
-    virtual ~FileCacheManager();
+    virtual ~FileCacheManager() {saveToFile();}
 
 };
 
