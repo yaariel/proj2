@@ -31,3 +31,7 @@ void FileCacheManager::saveToFile() {
     }
     writer.close();
 }
+
+FileCacheManager::~FileCacheManager() {
+    saveToFile();
+}

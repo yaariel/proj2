@@ -39,6 +39,8 @@ public:
         records[problem] = solution;
     }
 
+    virtual ~FileCacheManager();
+
 };
 
 #endif //PROJ2_FILECACHEMANAGER_H
