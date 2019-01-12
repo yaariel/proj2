@@ -150,32 +150,32 @@ FileCacheManager.cpp.s:
 	$(MAKE) -f CMakeFiles/proj2.dir/build.make CMakeFiles/proj2.dir/FileCacheManager.cpp.s
 .PHONY : FileCacheManager.cpp.s
 
-MyMatrixProblem.o: MyMatrixProblem.cpp.o
+MyMatrixSearchable.o: MyMatrixSearchable.cpp.o
 
-.PHONY : MyMatrixProblem.o
+.PHONY : MyMatrixSearchable.o
 
 # target to build an object file
-MyMatrixProblem.cpp.o:
-	$(MAKE) -f CMakeFiles/proj2.dir/build.make CMakeFiles/proj2.dir/MyMatrixProblem.cpp.o
-.PHONY : MyMatrixProblem.cpp.o
+MyMatrixSearchable.cpp.o:
+	$(MAKE) -f CMakeFiles/proj2.dir/build.make CMakeFiles/proj2.dir/MyMatrixSearchable.cpp.o
+.PHONY : MyMatrixSearchable.cpp.o
 
-MyMatrixProblem.i: MyMatrixProblem.cpp.i
+MyMatrixSearchable.i: MyMatrixSearchable.cpp.i
 
-.PHONY : MyMatrixProblem.i
+.PHONY : MyMatrixSearchable.i
 
 # target to preprocess a source file
-MyMatrixProblem.cpp.i:
-	$(MAKE) -f CMakeFiles/proj2.dir/build.make CMakeFiles/proj2.dir/MyMatrixProblem.cpp.i
-.PHONY : MyMatrixProblem.cpp.i
+MyMatrixSearchable.cpp.i:
+	$(MAKE) -f CMakeFiles/proj2.dir/build.make CMakeFiles/proj2.dir/MyMatrixSearchable.cpp.i
+.PHONY : MyMatrixSearchable.cpp.i
 
-MyMatrixProblem.s: MyMatrixProblem.cpp.s
+MyMatrixSearchable.s: MyMatrixSearchable.cpp.s
 
-.PHONY : MyMatrixProblem.s
+.PHONY : MyMatrixSearchable.s
 
 # target to generate assembly for a file
-MyMatrixProblem.cpp.s:
-	$(MAKE) -f CMakeFiles/proj2.dir/build.make CMakeFiles/proj2.dir/MyMatrixProblem.cpp.s
-.PHONY : MyMatrixProblem.cpp.s
+MyMatrixSearchable.cpp.s:
+	$(MAKE) -f CMakeFiles/proj2.dir/build.make CMakeFiles/proj2.dir/MyMatrixSearchable.cpp.s
+.PHONY : MyMatrixSearchable.cpp.s
 
 MyTestClientHandler.o: MyTestClientHandler.cpp.o
 
@@ -243,9 +243,9 @@ help:
 	@echo "... FileCacheManager.o"
 	@echo "... FileCacheManager.i"
 	@echo "... FileCacheManager.s"
-	@echo "... MyMatrixProblem.o"
-	@echo "... MyMatrixProblem.i"
-	@echo "... MyMatrixProblem.s"
+	@echo "... MyMatrixSearchable.o"
+	@echo "... MyMatrixSearchable.i"
+	@echo "... MyMatrixSearchable.s"
 	@echo "... MyTestClientHandler.o"
 	@echo "... MyTestClientHandler.i"
 	@echo "... MyTestClientHandler.s"

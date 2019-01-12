@@ -96,25 +96,25 @@ CMakeFiles/proj2.dir/FileCacheManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/proj2.dir/FileCacheManager.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/frieddv/CLionProjects/proj2/FileCacheManager.cpp -o CMakeFiles/proj2.dir/FileCacheManager.cpp.s
 
-CMakeFiles/proj2.dir/MyMatrixProblem.cpp.o: CMakeFiles/proj2.dir/flags.make
-CMakeFiles/proj2.dir/MyMatrixProblem.cpp.o: ../MyMatrixProblem.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/frieddv/CLionProjects/proj2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/proj2.dir/MyMatrixProblem.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/proj2.dir/MyMatrixProblem.cpp.o -c /home/frieddv/CLionProjects/proj2/MyMatrixProblem.cpp
+CMakeFiles/proj2.dir/MyMatrixSearchable.cpp.o: CMakeFiles/proj2.dir/flags.make
+CMakeFiles/proj2.dir/MyMatrixSearchable.cpp.o: ../MyMatrixSearchable.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/frieddv/CLionProjects/proj2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/proj2.dir/MyMatrixSearchable.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/proj2.dir/MyMatrixSearchable.cpp.o -c /home/frieddv/CLionProjects/proj2/MyMatrixSearchable.cpp
 
-CMakeFiles/proj2.dir/MyMatrixProblem.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/proj2.dir/MyMatrixProblem.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/frieddv/CLionProjects/proj2/MyMatrixProblem.cpp > CMakeFiles/proj2.dir/MyMatrixProblem.cpp.i
+CMakeFiles/proj2.dir/MyMatrixSearchable.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/proj2.dir/MyMatrixSearchable.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/frieddv/CLionProjects/proj2/MyMatrixSearchable.cpp > CMakeFiles/proj2.dir/MyMatrixSearchable.cpp.i
 
-CMakeFiles/proj2.dir/MyMatrixProblem.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/proj2.dir/MyMatrixProblem.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/frieddv/CLionProjects/proj2/MyMatrixProblem.cpp -o CMakeFiles/proj2.dir/MyMatrixProblem.cpp.s
+CMakeFiles/proj2.dir/MyMatrixSearchable.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/proj2.dir/MyMatrixSearchable.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/frieddv/CLionProjects/proj2/MyMatrixSearchable.cpp -o CMakeFiles/proj2.dir/MyMatrixSearchable.cpp.s
 
 # Object files for target proj2
 proj2_OBJECTS = \
 "CMakeFiles/proj2.dir/main.cpp.o" \
 "CMakeFiles/proj2.dir/MyTestClientHandler.cpp.o" \
 "CMakeFiles/proj2.dir/FileCacheManager.cpp.o" \
-"CMakeFiles/proj2.dir/MyMatrixProblem.cpp.o"
+"CMakeFiles/proj2.dir/MyMatrixSearchable.cpp.o"
 
 # External object files for target proj2
 proj2_EXTERNAL_OBJECTS =
@@ -122,7 +122,7 @@ proj2_EXTERNAL_OBJECTS =
 proj2: CMakeFiles/proj2.dir/main.cpp.o
 proj2: CMakeFiles/proj2.dir/MyTestClientHandler.cpp.o
 proj2: CMakeFiles/proj2.dir/FileCacheManager.cpp.o
-proj2: CMakeFiles/proj2.dir/MyMatrixProblem.cpp.o
+proj2: CMakeFiles/proj2.dir/MyMatrixSearchable.cpp.o
 proj2: CMakeFiles/proj2.dir/build.make
 proj2: CMakeFiles/proj2.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/frieddv/CLionProjects/proj2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable proj2"

@@ -105,22 +105,25 @@
 		<Unit filename="/home/frieddv/CLionProjects/proj2/ISearcher.h">
 			<Option target="proj2"/>
 		</Unit>
-		<Unit filename="/home/frieddv/CLionProjects/proj2/IServer_Side.h">
+		<Unit filename="/home/frieddv/CLionProjects/proj2/IServer.h">
 			<Option target="proj2"/>
 		</Unit>
 		<Unit filename="/home/frieddv/CLionProjects/proj2/ISolver.h">
 			<Option target="proj2"/>
 		</Unit>
-		<Unit filename="/home/frieddv/CLionProjects/proj2/MyMatrixProblem.cpp">
+		<Unit filename="/home/frieddv/CLionProjects/proj2/MyMatrixSearchable.cpp">
 			<Option target="proj2"/>
 		</Unit>
-		<Unit filename="/home/frieddv/CLionProjects/proj2/MyMatrixProblem.h">
+		<Unit filename="/home/frieddv/CLionProjects/proj2/MyMatrixSearchable.h">
 			<Option target="proj2"/>
 		</Unit>
 		<Unit filename="/home/frieddv/CLionProjects/proj2/MyTestClientHandler.cpp">
 			<Option target="proj2"/>
 		</Unit>
 		<Unit filename="/home/frieddv/CLionProjects/proj2/MyTestClientHandler.h">
+			<Option target="proj2"/>
+		</Unit>
+		<Unit filename="/home/frieddv/CLionProjects/proj2/PriorityBasedSearcher.h">
 			<Option target="proj2"/>
 		</Unit>
 		<Unit filename="/home/frieddv/CLionProjects/proj2/State.h">
