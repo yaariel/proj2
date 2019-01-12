@@ -11,6 +11,11 @@
 template <class T>
 
 class ISearchable {
+
+    State<T> source;
+    State<T> destination;
+    std::vector<State<T>> states;
+
 public:
     virtual State<T> getInitialState() = 0;
 
