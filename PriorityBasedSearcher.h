@@ -5,9 +5,11 @@
 #ifndef PROJ2_PRIORITYBASEDSEARCHER_H
 #define PROJ2_PRIORITYBASEDSEARCHER_H
 
+#include "ISearcher.h"
+
 template <class solution, class T>
 
-class PriorityBasedSearcher : public ISearcher {
+class PriorityBasedSearcher : public ISearcher<solution, T> {
 
 
 

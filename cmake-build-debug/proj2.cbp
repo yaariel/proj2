@@ -126,6 +126,12 @@
 		<Unit filename="/home/frieddv/CLionProjects/proj2/PriorityBasedSearcher.h">
 			<Option target="proj2"/>
 		</Unit>
+		<Unit filename="/home/frieddv/CLionProjects/proj2/QueueBasedSearcher.h">
+			<Option target="proj2"/>
+		</Unit>
+		<Unit filename="/home/frieddv/CLionProjects/proj2/StackBasedSearcher.h">
+			<Option target="proj2"/>
+		</Unit>
 		<Unit filename="/home/frieddv/CLionProjects/proj2/State.h">
 			<Option target="proj2"/>
 		</Unit>
