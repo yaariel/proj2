@@ -34,8 +34,8 @@ public:
         implement this!
     }
 
-    virtual bool isGoalState(State<pair<int, int>> &current) {
-        return current == goalState;
+    virtual State<pair<int, int>> getGoalState() {
+        return goalState;
     }
 
     virtual vector<State<pair<int, int>>> getPossibleNextStates(State<pair<int, int>> &current);

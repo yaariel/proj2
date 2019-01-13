@@ -7,14 +7,16 @@
 
 #include "ISearcher.h"
 #include <queue>
+#include "State.h"
 
 template <class solution, class T>
 
 class PriorityBasedSearcher : public ISearcher<solution, T> {
 
-    std::priority_queue<T> closedGroup;
+    std::priority_queue<State<T>> closedGroup;
 
 public:
+
 };
 
 

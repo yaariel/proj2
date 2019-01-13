@@ -16,7 +16,7 @@ public:
 
     virtual State<T> getInitialState() = 0;
 
-    virtual bool isGoalState(const State<T> &current) = 0;
+    virtual State<T> getGoalState() = 0;
 
     virtual std::vector<State<T>> getPossibleNextStates(State<T> &current) = 0;
 };
