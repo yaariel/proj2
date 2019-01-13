@@ -12,16 +12,13 @@ template <class T>
 
 class ISearchable {
 
-//    State<T> source;
-//    State<T> destination;
-//    std::vector<State<T>> states;
-
 public:
+
     virtual State<T> getInitialState() = 0;
 
     virtual bool isGoalState(const State<T> &current) = 0;
 
-    virtual std::vector<State<T>> getAllPossibleStates(State<T> &current) = 0;
+    virtual std::vector<State<T>> getPossibleNextStates(State<T> &current) = 0;
 };
 
 

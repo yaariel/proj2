@@ -6,12 +6,13 @@
 #define PROJ2_PRIORITYBASEDSEARCHER_H
 
 #include "ISearcher.h"
+#include <queue>
 
 template <class solution, class T>
 
 class PriorityBasedSearcher : public ISearcher<solution, T> {
 
-
+    std::priority_queue<T> closedGroup;
 
 public:
 };

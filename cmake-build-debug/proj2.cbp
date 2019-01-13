@@ -129,6 +129,12 @@
 		<Unit filename="/home/frieddv/CLionProjects/proj2/QueueBasedSearcher.h">
 			<Option target="proj2"/>
 		</Unit>
+		<Unit filename="/home/frieddv/CLionProjects/proj2/SearchableMatrixFactory.cpp">
+			<Option target="proj2"/>
+		</Unit>
+		<Unit filename="/home/frieddv/CLionProjects/proj2/SearchableMatrixFactory.h">
+			<Option target="proj2"/>
+		</Unit>
 		<Unit filename="/home/frieddv/CLionProjects/proj2/StackBasedSearcher.h">
 			<Option target="proj2"/>
 		</Unit>

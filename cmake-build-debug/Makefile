@@ -204,6 +204,33 @@ MyTestClientHandler.cpp.s:
 	$(MAKE) -f CMakeFiles/proj2.dir/build.make CMakeFiles/proj2.dir/MyTestClientHandler.cpp.s
 .PHONY : MyTestClientHandler.cpp.s
 
+SearchableMatrixFactory.o: SearchableMatrixFactory.cpp.o
+
+.PHONY : SearchableMatrixFactory.o
+
+# target to build an object file
+SearchableMatrixFactory.cpp.o:
+	$(MAKE) -f CMakeFiles/proj2.dir/build.make CMakeFiles/proj2.dir/SearchableMatrixFactory.cpp.o
+.PHONY : SearchableMatrixFactory.cpp.o
+
+SearchableMatrixFactory.i: SearchableMatrixFactory.cpp.i
+
+.PHONY : SearchableMatrixFactory.i
+
+# target to preprocess a source file
+SearchableMatrixFactory.cpp.i:
+	$(MAKE) -f CMakeFiles/proj2.dir/build.make CMakeFiles/proj2.dir/SearchableMatrixFactory.cpp.i
+.PHONY : SearchableMatrixFactory.cpp.i
+
+SearchableMatrixFactory.s: SearchableMatrixFactory.cpp.s
+
+.PHONY : SearchableMatrixFactory.s
+
+# target to generate assembly for a file
+SearchableMatrixFactory.cpp.s:
+	$(MAKE) -f CMakeFiles/proj2.dir/build.make CMakeFiles/proj2.dir/SearchableMatrixFactory.cpp.s
+.PHONY : SearchableMatrixFactory.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -249,6 +276,9 @@ help:
 	@echo "... MyTestClientHandler.o"
 	@echo "... MyTestClientHandler.i"
 	@echo "... MyTestClientHandler.s"
+	@echo "... SearchableMatrixFactory.o"
+	@echo "... SearchableMatrixFactory.i"
+	@echo "... SearchableMatrixFactory.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -5,6 +5,8 @@
 #ifndef PROJ2_STATE_H
 #define PROJ2_STATE_H
 
+typedef enum {NOT = -1 ,UP, DOWN, LEFT, RIGHT} Direction;
+
 template <class T>
 
 class State {
@@ -12,10 +14,12 @@ private:
     T current;
     double cost;
     State<T> *father;
+    Direction direction;
 
 public:
 
-    State(T current, double cost, State<T> *father) : current(current), cost(cost), father(father) {};
+    State(T current, double cost, State<T> *father, Direction direction) : current(current), cost(cost),
+                                                                           father(father), direction(direction) {};
 
     void setCost(double newCost) {cost = newCost;}
 

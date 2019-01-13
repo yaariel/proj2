@@ -20,28 +20,27 @@ class MyMatrixSearchable: public ISearchable<pair<int, int>> {
 
 public:
 
-    MyMatrixSearchable(const vector<string> &matrix, State<pair<int, int>> &initState,
-                       State<pair<int, int>> &goalState) : length(length), width(width),
-                                                          initState(initState), goalState(goalState) {
-        matrixStates = matrixCreator(matrix);
+    MyMatrixSearchable(const vector<vector<int>> &matrix, State<pair<int, int>> &initState,
+                       State<pair<int, int>> &goalState) :matrixStates(matrix), initState(initState), goalState(goalState) {
         width = matrixStates[0].size();
         length = matrixStates.size();
-
     }
 
-    virtual State<pair<int, int>> getInitialState();
+    virtual State<pair<int, int>> getInitialState() {
+        return initState;
+    }
 
     vector<vector<int>> matrixCreator(vector<string> toMatrix) {
-
+        implement this!
     }
 
     virtual bool isGoalState(State<pair<int, int>> &current) {
         return current == goalState;
     }
 
-    virtual vector<State<pair<int, int>>> getAllPossibleStates(State<pair<int, int>> &current) {
+    virtual vector<State<pair<int, int>>> getPossibleNextStates(State<pair<int, int>> &current);
 
-    }
+
 };
 
 
