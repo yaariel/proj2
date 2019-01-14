@@ -84,6 +84,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/frieddv/CLionProjects/proj2/BestFirstSearcher.cpp">
+			<Option target="proj2"/>
+		</Unit>
+		<Unit filename="/home/frieddv/CLionProjects/proj2/BestFirstSearcher.h">
+			<Option target="proj2"/>
+		</Unit>
 		<Unit filename="/home/frieddv/CLionProjects/proj2/CompareCost.h">
 			<Option target="proj2"/>
 		</Unit>

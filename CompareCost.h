@@ -13,8 +13,8 @@ template <class T>
 
 struct CompareCost {
 public:
-    bool operator()(State<T> left, State<T> right) const {
-        return left.getCost() < right.getCost();
+    bool operator()(State<T> *left, State<T> *right) const {
+        return left->getCost() < right->getCost();
     }
 };
 

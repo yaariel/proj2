@@ -123,6 +123,33 @@ proj2/fast:
 	$(MAKE) -f CMakeFiles/proj2.dir/build.make CMakeFiles/proj2.dir/build
 .PHONY : proj2/fast
 
+BestFirstSearcher.o: BestFirstSearcher.cpp.o
+
+.PHONY : BestFirstSearcher.o
+
+# target to build an object file
+BestFirstSearcher.cpp.o:
+	$(MAKE) -f CMakeFiles/proj2.dir/build.make CMakeFiles/proj2.dir/BestFirstSearcher.cpp.o
+.PHONY : BestFirstSearcher.cpp.o
+
+BestFirstSearcher.i: BestFirstSearcher.cpp.i
+
+.PHONY : BestFirstSearcher.i
+
+# target to preprocess a source file
+BestFirstSearcher.cpp.i:
+	$(MAKE) -f CMakeFiles/proj2.dir/build.make CMakeFiles/proj2.dir/BestFirstSearcher.cpp.i
+.PHONY : BestFirstSearcher.cpp.i
+
+BestFirstSearcher.s: BestFirstSearcher.cpp.s
+
+.PHONY : BestFirstSearcher.s
+
+# target to generate assembly for a file
+BestFirstSearcher.cpp.s:
+	$(MAKE) -f CMakeFiles/proj2.dir/build.make CMakeFiles/proj2.dir/BestFirstSearcher.cpp.s
+.PHONY : BestFirstSearcher.cpp.s
+
 FileCacheManager.o: FileCacheManager.cpp.o
 
 .PHONY : FileCacheManager.o
@@ -267,6 +294,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... proj2"
+	@echo "... BestFirstSearcher.o"
+	@echo "... BestFirstSearcher.i"
+	@echo "... BestFirstSearcher.s"
 	@echo "... FileCacheManager.o"
 	@echo "... FileCacheManager.i"
 	@echo "... FileCacheManager.s"
