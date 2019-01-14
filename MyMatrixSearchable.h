@@ -30,10 +30,6 @@ public:
         return initState;
     }
 
-    vector<vector<int>> matrixCreator(vector<string> toMatrix) {
-        implement this!
-    }
-
     virtual State<pair<int, int>> getGoalState() {
         return goalState;
     }
