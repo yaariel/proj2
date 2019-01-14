@@ -5,7 +5,7 @@
 #include <sstream>
 #include "SearchableMatrixFactory.h"
 
-MyMatrixSearchable SearchableMatrixFactory::createMatrix(vector<string> input) const {
+MyMatrixSearchable SearchableMatrixFactory::createMatrix(vector<string> input) {
     vector<vector<int>> matrix;
     //keeping the init and goal states separately, for convenience
     string goalData = extractLastLine(input);
@@ -24,7 +24,7 @@ MyMatrixSearchable SearchableMatrixFactory::createMatrix(vector<string> input) c
     return MyMatrixSearchable(matrix, init, goal);
 }
 
-vector<int> SearchableMatrixFactory::parseRow(const string &line) const {
+vector<int> SearchableMatrixFactory::parseRow(const string &line) {
     vector<int> lineAsInt;
     string token;
     stringstream ss(line);
@@ -34,13 +34,13 @@ vector<int> SearchableMatrixFactory::parseRow(const string &line) const {
     return lineAsInt;
 }
 
-string SearchableMatrixFactory::extractLastLine(vector<string> &input) const {
+string SearchableMatrixFactory::extractLastLine(vector<string> &input) {
     string temp = input.back();
     input.pop_back();
     return temp;
 }
 
-pair<int, int> SearchableMatrixFactory::parseCoordinates(const string &data) const {
+pair<int, int> SearchableMatrixFactory::parseCoordinates(const string &data) {
     string coordinate;
     int first, second;
     stringstream ss(data);

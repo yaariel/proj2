@@ -11,14 +11,14 @@
 
 class SearchableMatrixFactory {
 public:
-    MyMatrixSearchable createMatrix(vector<string> input) const;
+    static MyMatrixSearchable createMatrix(vector<string> input);
 
 private:
-    string extractLastLine(vector<string> &input) const;
+    static string extractLastLine(vector<string> &input);
 
-    vector<int> parseRow(const string &line) const;
+    static vector<int> parseRow(const string &line);
 
-    pair<int, int> parseCoordinates(const string &data) const;
+    static pair<int, int> parseCoordinates(const string &data);
 };
 
 
