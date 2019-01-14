@@ -26,15 +26,17 @@ public:
         length = matrixStates.size();
     }
 
-    virtual State<pair<int, int>> getInitialState() {
-        return initState;
+    virtual State<pair<int, int>> *getInitialState() {
+        return &initState;
     }
 
-    virtual State<pair<int, int>> getGoalState() {
-        return goalState;
+    virtual State<pair<int, int>> *getGoalState() {
+        return &goalState;
     }
 
     virtual vector<State<pair<int, int>>> getPossibleNextStates(State<pair<int, int>> &current);
+
+    virtual vector<State<pair<int, int>>> getPossibleNextStates(State<pair<int, int>> &current, State<pair<int, int>> &goal);
 
 
 };

@@ -84,6 +84,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/frieddv/CLionProjects/proj2/AStarSearcher.cpp">
+			<Option target="proj2"/>
+		</Unit>
+		<Unit filename="/home/frieddv/CLionProjects/proj2/AStarSearcher.h">
+			<Option target="proj2"/>
+		</Unit>
 		<Unit filename="/home/frieddv/CLionProjects/proj2/BestFirstSearcher.cpp">
 			<Option target="proj2"/>
 		</Unit>
@@ -91,6 +97,9 @@
 			<Option target="proj2"/>
 		</Unit>
 		<Unit filename="/home/frieddv/CLionProjects/proj2/CompareCost.h">
+			<Option target="proj2"/>
+		</Unit>
+		<Unit filename="/home/frieddv/CLionProjects/proj2/CompareCostManhattan.h">
 			<Option target="proj2"/>
 		</Unit>
 		<Unit filename="/home/frieddv/CLionProjects/proj2/FileCacheManager.cpp">

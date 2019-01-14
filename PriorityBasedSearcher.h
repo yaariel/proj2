@@ -28,8 +28,9 @@ protected:
     State<T> *popOpenList() {
         ++evaluatedNodes;
         auto iter = openList.begin();
-
-        implement this!
+        State<T> *result = *iter;
+        openList.erase(iter);
+        return result;
     }
 
     solution backTrace(State<T> *current, ISearchable<T> *searchable) {
@@ -63,14 +64,17 @@ protected:
     }
 
     void updateStatePriority(State<T> *current) {
-        auto item = closedList.find(current);
-        if (item != closedList.end()) {
+        auto item = openList.find(current);
+        if (item != openList.end()) {
             if (openList.CompareCost(current, item)) {
-                closedList.erase(item);
-                closedList.insert(current);
+                openList.erase(item);
+                openList.insert(current);
             }
+        } else {
+            openList.insert(current);
         }
     }
+
 
 public:
 
