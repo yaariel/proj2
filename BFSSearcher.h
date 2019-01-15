@@ -32,7 +32,7 @@ public:
                 }
             }
         }
-        // return error or any kind of minus 1 as not having route
+        return NULL;
     }
 };
 
