@@ -204,6 +204,33 @@ MyMatrixSearchable.cpp.s:
 	$(MAKE) -f CMakeFiles/proj2.dir/build.make CMakeFiles/proj2.dir/MyMatrixSearchable.cpp.s
 .PHONY : MyMatrixSearchable.cpp.s
 
+MyParallelServer.o: MyParallelServer.cpp.o
+
+.PHONY : MyParallelServer.o
+
+# target to build an object file
+MyParallelServer.cpp.o:
+	$(MAKE) -f CMakeFiles/proj2.dir/build.make CMakeFiles/proj2.dir/MyParallelServer.cpp.o
+.PHONY : MyParallelServer.cpp.o
+
+MyParallelServer.i: MyParallelServer.cpp.i
+
+.PHONY : MyParallelServer.i
+
+# target to preprocess a source file
+MyParallelServer.cpp.i:
+	$(MAKE) -f CMakeFiles/proj2.dir/build.make CMakeFiles/proj2.dir/MyParallelServer.cpp.i
+.PHONY : MyParallelServer.cpp.i
+
+MyParallelServer.s: MyParallelServer.cpp.s
+
+.PHONY : MyParallelServer.s
+
+# target to generate assembly for a file
+MyParallelServer.cpp.s:
+	$(MAKE) -f CMakeFiles/proj2.dir/build.make CMakeFiles/proj2.dir/MyParallelServer.cpp.s
+.PHONY : MyParallelServer.cpp.s
+
 MyTestClientHandler.o: MyTestClientHandler.cpp.o
 
 .PHONY : MyTestClientHandler.o
@@ -258,6 +285,33 @@ SearchableMatrixFactory.cpp.s:
 	$(MAKE) -f CMakeFiles/proj2.dir/build.make CMakeFiles/proj2.dir/SearchableMatrixFactory.cpp.s
 .PHONY : SearchableMatrixFactory.cpp.s
 
+TCPServer.o: TCPServer.cpp.o
+
+.PHONY : TCPServer.o
+
+# target to build an object file
+TCPServer.cpp.o:
+	$(MAKE) -f CMakeFiles/proj2.dir/build.make CMakeFiles/proj2.dir/TCPServer.cpp.o
+.PHONY : TCPServer.cpp.o
+
+TCPServer.i: TCPServer.cpp.i
+
+.PHONY : TCPServer.i
+
+# target to preprocess a source file
+TCPServer.cpp.i:
+	$(MAKE) -f CMakeFiles/proj2.dir/build.make CMakeFiles/proj2.dir/TCPServer.cpp.i
+.PHONY : TCPServer.cpp.i
+
+TCPServer.s: TCPServer.cpp.s
+
+.PHONY : TCPServer.s
+
+# target to generate assembly for a file
+TCPServer.cpp.s:
+	$(MAKE) -f CMakeFiles/proj2.dir/build.make CMakeFiles/proj2.dir/TCPServer.cpp.s
+.PHONY : TCPServer.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -303,12 +357,18 @@ help:
 	@echo "... MyMatrixSearchable.o"
 	@echo "... MyMatrixSearchable.i"
 	@echo "... MyMatrixSearchable.s"
+	@echo "... MyParallelServer.o"
+	@echo "... MyParallelServer.i"
+	@echo "... MyParallelServer.s"
 	@echo "... MyTestClientHandler.o"
 	@echo "... MyTestClientHandler.i"
 	@echo "... MyTestClientHandler.s"
 	@echo "... SearchableMatrixFactory.o"
 	@echo "... SearchableMatrixFactory.i"
 	@echo "... SearchableMatrixFactory.s"
+	@echo "... TCPServer.o"
+	@echo "... TCPServer.i"
+	@echo "... TCPServer.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -10,6 +10,8 @@ using namespace std;
 class IClientHandler {
 public:
     virtual void handleClient (int socket) = 0;
+
+    virtual ~IClientHandler(){}
 };
 
 
