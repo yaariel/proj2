@@ -21,15 +21,14 @@ public:
             if (*nodeToDevelop == *searchable->getGoalState()) {
                 return backTrace(nodeToDevelop, searchable);
             }
-            if (!isInClosedList(nodeToDevelop)) {
-                addToCloseList(nodeToDevelop);
-            }
 
             std::vector<State<T>*> successors = searchable->getPossibleNextStates(nodeToDevelop);
             for (auto successor : successors) {
-                if (!isInClosedList(successor) && !isInOpenList(successor)) {
+                if (!isInClosedList(successor)) {
                     addToOpenList(successor);
+                    addToCloseList(successor);
                 }
+
             }
         }
         return NULL;
