@@ -35,16 +35,13 @@ protected:
 
     solution backTrace(State<T> *current, ISearchable<T> *searchable) {
         std::queue<State<T> *> trace;
-        std::queue<State<T> *> output;
         State<T> *tempState = current;
-
         while (!(*tempState == searchable->getInitialState())) {
             trace.push_front(tempState);
             tempState = tempState->getFather();
         }
         trace.push_front(searchable->getInitialState());
-
-        return output;
+        return trace;
     }
 
     unsigned long getOpenListSize() {
