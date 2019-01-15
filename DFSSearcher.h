@@ -2,17 +2,16 @@
 // Created by frieddv on 1/15/19.
 //
 
-#ifndef PROJ2_BFSSEARCHER_H
-#define PROJ2_BFSSEARCHER_H
+#ifndef PROJ2_DFSSEARCHER_H
+#define PROJ2_DFSSEARCHER_H
 
-#include "QueueBasedSearcher.h"
+#include "StackBasedSearcher.h"
 
 template <class solution, class T>
 
-class BFSSearcher : public QueueBasedSearcher<solution, T>{
+class DFSSearcher: public StackBasedSearcher<solution, T> {
 
 public:
-
     virtual solution search(ISearchable<T> *searchable) {
         addToOpenList(searchable->getInitialState());
         //as long there is a node in the queue
@@ -37,4 +36,4 @@ public:
 };
 
 
-#endif //PROJ2_BFSSEARCHER_H
+#endif //PROJ2_DFSSEARCHER_H

@@ -7,6 +7,7 @@
 
 #include "ISearcher.h"
 #include <queue>
+#include <unordered_set>
 
 template <class solution, class T>
 
@@ -17,7 +18,7 @@ private:
 
 protected:
     std::queue<State<T>*> openList;
-    std::vector<State<T>*> closedList;
+    std::unordered_set<State<T>*> closedList;
 
     State<T> *popOpenList() {
         ++evaluatedNodes;
@@ -36,6 +37,10 @@ protected:
 
     void addToOpenList(State<T> *current) {
         openList.push(current);
+    }
+
+    void addToCloseList(State<T> *current) {
+        closedList.insert(current);
     }
 
     bool isInClosedList(State<T> *current) {

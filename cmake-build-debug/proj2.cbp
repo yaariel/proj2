@@ -99,6 +99,9 @@
 		<Unit filename="/home/frieddv/CLionProjects/proj2/CompareCost.h">
 			<Option target="proj2"/>
 		</Unit>
+		<Unit filename="/home/frieddv/CLionProjects/proj2/DFSSearcher.h">
+			<Option target="proj2"/>
+		</Unit>
 		<Unit filename="/home/frieddv/CLionProjects/proj2/FileCacheManager.cpp">
 			<Option target="proj2"/>
 		</Unit>

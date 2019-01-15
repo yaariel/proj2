@@ -29,7 +29,46 @@ protected:
         return result;
     }
 
+    solution backTrace(State<T> *current, ISearchable<T> *searchable) {
+        implement this!
+    }
 
+    unsigned long getOpenListSize() {
+        return openList.size();
+    }
+
+    void addToOpenList(State<T> *current) {
+        openList.push(current);
+    }
+
+    bool isInOpenList(State<T> *current) {
+        std::vector<State<T>*> temp;
+        while (!openList.empty()) {
+            temp.push_back(openList.top());
+            openList.pop();
+        }
+
+        //need to be reversed
+        auto it = temp.rbegin();
+        for (; it != temp.begin(); it++) {
+            openList.push(*it);
+        }
+        for (auto item : temp) {
+            if (*current == *item) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    bool isInClosedList(State<T> *current) {
+        for (auto node : closedList) {
+            if (*current == *node) {
+                return true;
+            }
+        }
+        return false;
+    }
 };
 
 
