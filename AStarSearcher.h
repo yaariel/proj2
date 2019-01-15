@@ -22,7 +22,7 @@ public:
             State<T> *nodeToDevelop = this->popOpenList();
             this->closedList.push_back(nodeToDevelop);
             //if we got to the goal
-            if (nodeToDevelop == searchable->getGoalState()) {
+            if (*nodeToDevelop == *searchable->getGoalState()) {
                 return backTrace(nodeToDevelop, searchable);
             }
             //todo: checking if needed to change the constructor

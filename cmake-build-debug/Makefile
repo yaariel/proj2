@@ -123,33 +123,6 @@ proj2/fast:
 	$(MAKE) -f CMakeFiles/proj2.dir/build.make CMakeFiles/proj2.dir/build
 .PHONY : proj2/fast
 
-AStarSearcher.o: AStarSearcher.cpp.o
-
-.PHONY : AStarSearcher.o
-
-# target to build an object file
-AStarSearcher.cpp.o:
-	$(MAKE) -f CMakeFiles/proj2.dir/build.make CMakeFiles/proj2.dir/AStarSearcher.cpp.o
-.PHONY : AStarSearcher.cpp.o
-
-AStarSearcher.i: AStarSearcher.cpp.i
-
-.PHONY : AStarSearcher.i
-
-# target to preprocess a source file
-AStarSearcher.cpp.i:
-	$(MAKE) -f CMakeFiles/proj2.dir/build.make CMakeFiles/proj2.dir/AStarSearcher.cpp.i
-.PHONY : AStarSearcher.cpp.i
-
-AStarSearcher.s: AStarSearcher.cpp.s
-
-.PHONY : AStarSearcher.s
-
-# target to generate assembly for a file
-AStarSearcher.cpp.s:
-	$(MAKE) -f CMakeFiles/proj2.dir/build.make CMakeFiles/proj2.dir/AStarSearcher.cpp.s
-.PHONY : AStarSearcher.cpp.s
-
 BestFirstSearcher.o: BestFirstSearcher.cpp.o
 
 .PHONY : BestFirstSearcher.o
@@ -321,9 +294,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... proj2"
-	@echo "... AStarSearcher.o"
-	@echo "... AStarSearcher.i"
-	@echo "... AStarSearcher.s"
 	@echo "... BestFirstSearcher.o"
 	@echo "... BestFirstSearcher.i"
 	@echo "... BestFirstSearcher.s"

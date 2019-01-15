@@ -5,7 +5,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/proj2.dir/MyMatrixSearchable.cpp.o"
   "CMakeFiles/proj2.dir/SearchableMatrixFactory.cpp.o"
   "CMakeFiles/proj2.dir/BestFirstSearcher.cpp.o"
-  "CMakeFiles/proj2.dir/AStarSearcher.cpp.o"
   "proj2.pdb"
   "proj2"
 )
