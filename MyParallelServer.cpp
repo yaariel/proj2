@@ -22,10 +22,8 @@ void server_side::MyParallelServer::run(int socket, bool *shouldStop, IClientHan
     listen(socket, SOMAXCONN);
     addrLen = sizeof(clnt_addr);
 
-    while (!*shouldStop) {
-        timeout.tv_sec = 10;
-        timeout.tv_usec = 0;
-        setsockopt(socket, SOL_SOCKET, SO_RCVTIMEO, (char *)&timeout, sizeof(timeout));
+    while (true) {
+
 
         socketfd = accept(socket, (struct sockaddr *)&clnt_addr, (socklen_t *)&addrLen);
         if (socketfd < 0) {
@@ -42,6 +40,10 @@ void server_side::MyParallelServer::run(int socket, bool *shouldStop, IClientHan
         pthread_t thread;
         pthread_create(&thread, nullptr, handleClient, args);
         threads.push_back(thread);
+
+        timeout.tv_sec = 1;
+        timeout.tv_usec = 0;
+        setsockopt(socket, SOL_SOCKET, SO_RCVTIMEO, (char *)&timeout, sizeof(timeout));
     }
 
     for (pthread_t thread : threads) {

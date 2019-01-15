@@ -52,8 +52,6 @@
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j2 -f &quot;/home/frieddv/CLionProjects/proj2/cmake-build-debug/Makefile&quot;  VERBOSE=1 proj2"/>
@@ -77,99 +75,100 @@
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j2 -f &quot;/home/ariel/CLionProjects/proj2/cmake-build-debug/Makefile&quot;  VERBOSE=1 proj2/fast"/>
-					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/ariel/CLionProjects/proj2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j2 -f &quot;/home/ariel/CLionProjects/proj2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j2 -f &quot;/home/ariel/CLionProjects/proj2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/frieddv/CLionProjects/proj2/cmake-build-debug/Makefile&quot;  VERBOSE=1 proj2/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/frieddv/CLionProjects/proj2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/frieddv/CLionProjects/proj2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/frieddv/CLionProjects/proj2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/ariel/CLionProjects/proj2/AStarSearcher.h">
+		<Unit filename="/home/frieddv/CLionProjects/proj2/AStarSearcher.h">
 			<Option target="proj2"/>
 		</Unit>
-		<Unit filename="/home/ariel/CLionProjects/proj2/BestFirstSearcher.cpp">
+		<Unit filename="/home/frieddv/CLionProjects/proj2/BestFirstSearcher.cpp">
 			<Option target="proj2"/>
 		</Unit>
-		<Unit filename="/home/ariel/CLionProjects/proj2/BestFirstSearcher.h">
+		<Unit filename="/home/frieddv/CLionProjects/proj2/BestFirstSearcher.h">
 			<Option target="proj2"/>
 		</Unit>
-		<Unit filename="/home/ariel/CLionProjects/proj2/CompareCost.h">
+		<Unit filename="/home/frieddv/CLionProjects/proj2/CompareCost.h">
 			<Option target="proj2"/>
 		</Unit>
-		<Unit filename="/home/ariel/CLionProjects/proj2/FileCacheManager.cpp">
+		<Unit filename="/home/frieddv/CLionProjects/proj2/FileCacheManager.cpp">
 			<Option target="proj2"/>
 		</Unit>
-		<Unit filename="/home/ariel/CLionProjects/proj2/FileCacheManager.h">
+		<Unit filename="/home/frieddv/CLionProjects/proj2/FileCacheManager.h">
 			<Option target="proj2"/>
 		</Unit>
-		<Unit filename="/home/ariel/CLionProjects/proj2/ICacheManager.h">
+		<Unit filename="/home/frieddv/CLionProjects/proj2/ICacheManager.h">
 			<Option target="proj2"/>
 		</Unit>
-		<Unit filename="/home/ariel/CLionProjects/proj2/IClientHandler.h">
+		<Unit filename="/home/frieddv/CLionProjects/proj2/IClientHandler.h">
 			<Option target="proj2"/>
 		</Unit>
-		<Unit filename="/home/ariel/CLionProjects/proj2/ISearchable.h">
+		<Unit filename="/home/frieddv/CLionProjects/proj2/ISearchable.h">
 			<Option target="proj2"/>
 		</Unit>
-		<Unit filename="/home/ariel/CLionProjects/proj2/ISearcher.h">
+		<Unit filename="/home/frieddv/CLionProjects/proj2/ISearcher.h">
 			<Option target="proj2"/>
 		</Unit>
-		<Unit filename="/home/ariel/CLionProjects/proj2/IServer.h">
+		<Unit filename="/home/frieddv/CLionProjects/proj2/IServer.h">
 			<Option target="proj2"/>
 		</Unit>
-		<Unit filename="/home/ariel/CLionProjects/proj2/ISolver.h">
+		<Unit filename="/home/frieddv/CLionProjects/proj2/ISolver.h">
 			<Option target="proj2"/>
 		</Unit>
-		<Unit filename="/home/ariel/CLionProjects/proj2/MyMatrixSearchable.cpp">
+		<Unit filename="/home/frieddv/CLionProjects/proj2/MyMatrixSearchable.cpp">
 			<Option target="proj2"/>
 		</Unit>
-		<Unit filename="/home/ariel/CLionProjects/proj2/MyMatrixSearchable.h">
+		<Unit filename="/home/frieddv/CLionProjects/proj2/MyMatrixSearchable.h">
 			<Option target="proj2"/>
 		</Unit>
-		<Unit filename="/home/ariel/CLionProjects/proj2/MyParallelServer.cpp">
+		<Unit filename="/home/frieddv/CLionProjects/proj2/MyParallelServer.cpp">
 			<Option target="proj2"/>
 		</Unit>
-		<Unit filename="/home/ariel/CLionProjects/proj2/MyParallelServer.h">
+		<Unit filename="/home/frieddv/CLionProjects/proj2/MyParallelServer.h">
 			<Option target="proj2"/>
 		</Unit>
-		<Unit filename="/home/ariel/CLionProjects/proj2/MyTestClientHandler.cpp">
+		<Unit filename="/home/frieddv/CLionProjects/proj2/MyTestClientHandler.cpp">
 			<Option target="proj2"/>
 		</Unit>
-		<Unit filename="/home/ariel/CLionProjects/proj2/MyTestClientHandler.h">
+		<Unit filename="/home/frieddv/CLionProjects/proj2/MyTestClientHandler.h">
 			<Option target="proj2"/>
 		</Unit>
-		<Unit filename="/home/ariel/CLionProjects/proj2/PriorityBasedSearcher.h">
+		<Unit filename="/home/frieddv/CLionProjects/proj2/PriorityBasedSearcher.h">
 			<Option target="proj2"/>
 		</Unit>
-		<Unit filename="/home/ariel/CLionProjects/proj2/QueueBasedSearcher.h">
+		<Unit filename="/home/frieddv/CLionProjects/proj2/QueueBasedSearcher.h">
 			<Option target="proj2"/>
 		</Unit>
-		<Unit filename="/home/ariel/CLionProjects/proj2/SearchableMatrixFactory.cpp">
+		<Unit filename="/home/frieddv/CLionProjects/proj2/SearchableMatrixFactory.cpp">
 			<Option target="proj2"/>
 		</Unit>
-		<Unit filename="/home/ariel/CLionProjects/proj2/SearchableMatrixFactory.h">
+		<Unit filename="/home/frieddv/CLionProjects/proj2/SearchableMatrixFactory.h">
 			<Option target="proj2"/>
 		</Unit>
-		<Unit filename="/home/ariel/CLionProjects/proj2/StackBasedSearcher.h">
+		<Unit filename="/home/frieddv/CLionProjects/proj2/SearcherSolver.h">
 			<Option target="proj2"/>
 		</Unit>
-		<Unit filename="/home/ariel/CLionProjects/proj2/State.h">
+		<Unit filename="/home/frieddv/CLionProjects/proj2/StackBasedSearcher.h">
 			<Option target="proj2"/>
 		</Unit>
-		<Unit filename="/home/ariel/CLionProjects/proj2/TCPServer.cpp">
+		<Unit filename="/home/frieddv/CLionProjects/proj2/State.h">
 			<Option target="proj2"/>
 		</Unit>
-		<Unit filename="/home/ariel/CLionProjects/proj2/TCPServer.h">
+		<Unit filename="/home/frieddv/CLionProjects/proj2/TCPServer.cpp">
 			<Option target="proj2"/>
 		</Unit>
-		<Unit filename="/home/ariel/CLionProjects/proj2/main.cpp">
+		<Unit filename="/home/frieddv/CLionProjects/proj2/TCPServer.h">
 			<Option target="proj2"/>
 		</Unit>
-		<Unit filename="/home/ariel/CLionProjects/proj2/CMakeLists.txt">
+		<Unit filename="/home/frieddv/CLionProjects/proj2/main.cpp">
+			<Option target="proj2"/>
+		</Unit>
+		<Unit filename="/home/frieddv/CLionProjects/proj2/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

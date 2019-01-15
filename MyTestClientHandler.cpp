@@ -72,3 +72,9 @@ void MyTestClientHandler::handleClient(int socket) {
 
 
 }
+
+MyTestClientHandler::~MyTestClientHandler() {
+    delete(cacheManager);
+    delete(solver);
+
+}

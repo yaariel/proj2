@@ -15,6 +15,8 @@ class MyTestClientHandler : public IClientHandler{
 public:
     virtual void handleClient(int socket);
 
+    virtual ~MyTestClientHandler();
+
 private:
     ISolver<string, string> *solver;
     ICacheManager<string, string> *cacheManager;
