@@ -8,6 +8,7 @@
 #include "ISearcher.h"
 #include <queue>
 #include <unordered_set>
+#include <stack>
 
 template <class solution, class T>
 
@@ -27,16 +28,38 @@ protected:
         return result;
     }
 
-    std::queue<State<T>*> backTrace(State<T> *current, ISearchable<T> *searchable) {
-        std::queue<State<T> *> trace;
+    string backTrace(State<T> *current, ISearchable<T> *searchable) {
+        stack<State<T> *> trace;
         State<T> *tempState = current;
+        string result = "";
 
-        while (!(*tempState == searchable->getInitialState())) {
-            trace.push_front(tempState);
+        while (!(*tempState == *searchable->getInitialState())) {
+            trace.push(tempState);
             tempState = tempState->getFather();
         }
-        trace.push_front(searchable->getInitialState());
-        return trace;
+        trace.push(searchable->getInitialState());
+
+        while (!trace.empty()) {
+            switch (trace.top()->getDirection()) {
+                case UP:
+                    result += "Up,";
+                    break;
+                case DOWN:
+                    result += "Down,";
+                    break;
+                case LEFT:
+                    result += "Left,";
+                    break;
+                case RIGHT:
+                    result += "Right,";
+                    break;
+                default:
+                    break;
+            }
+            trace.pop();
+        }
+        result.pop_back();
+        return result;
     }
 
     unsigned long getOpenListSize() {

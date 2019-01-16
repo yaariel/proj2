@@ -9,8 +9,11 @@
 #include "CompareCost.h"
 #include "State.h"
 #include <queue>
+#include <stack>
 #include <set>
 #include <unordered_set>
+
+using namespace std;
 
 template <class solution, class T>
 
@@ -22,8 +25,8 @@ private:
 protected:
 
     //maybe the member itself need to move into private section, depends on
-    std::multiset<State<T>*, CompareCost<T>> openList;
-    std::unordered_set<State<T>*> closedList;
+    multiset<State<T>*, CompareCost<T>> openList;
+    vector<State<T>*> closedList;
 
     State<T> *popOpenList() {
         ++evaluatedNodes;
@@ -33,15 +36,38 @@ protected:
         return result;
     }
 
-    std::queue<State<T>*> backTrace(State<T> *current, ISearchable<T> *searchable) {
-        std::queue<State<T> *> trace;
+    string backTrace(State<T> *current, ISearchable<T> *searchable) {
+        stack<State<T> *> trace;
         State<T> *tempState = current;
+        string result = "";
+
         while (!(*tempState == *searchable->getInitialState())) {
-            trace.push_front(tempState);
+            trace.push(tempState);
             tempState = tempState->getFather();
         }
-        trace.push_front(searchable->getInitialState());
-        return trace;
+        trace.push(searchable->getInitialState());
+
+        while (!trace.empty()) {
+            switch (trace.top()->getDirection()) {
+                case UP:
+                    result += "up,";
+                    break;
+                case DOWN:
+                    result += "down,";
+                    break;
+                case LEFT:
+                    result += "left,";
+                    break;
+                case RIGHT:
+                    result += "right,";
+                    break;
+                default:
+                    break;
+            }
+            trace.pop();
+        }
+        result.pop_back();
+        return result;
     }
 
     unsigned long getOpenListSize() {
@@ -71,15 +97,20 @@ protected:
     }
 
     void updateStatePriority(State<T> *current) {
-        auto item = openList.find(current);
-        if (item != openList.end()) {
-            if (openList.CompareCost(current, item)) {
-                openList.erase(item);
-                openList.insert(current);
+        bool wasFound = false;
+        for (auto item : openList) {
+            if (*item == *current) {
+                wasFound = true;
+                if (item->getCost() > current->getCost()) {
+                    openList.erase(item);
+                    delete item;
+                    openList.insert(current);
+                }
+                break;
             }
-        } else {
-            openList.insert(current);
         }
+        if (!wasFound)
+            openList.insert(current);
     }
 
 

@@ -14,7 +14,7 @@ class BestFirstSearcher : public PriorityBasedSearcher<solution, T> {
 
 public:
 
-    std::queue<State<T>*> search(ISearchable<T> *searchable) {
+    virtual string search(ISearchable<T> *searchable) {
         //adding the initalState to the open list.
         this->addToOpenList(searchable->getInitialState());
         while (this->getOpenListSize() > 0) {
@@ -37,7 +37,7 @@ public:
                 }
             }
         }
-        return NULL;
+        return "-1";
     }
 
 };

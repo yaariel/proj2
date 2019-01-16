@@ -9,17 +9,19 @@ vector<State<pair<int, int>>*> MyMatrixSearchable::getPossibleNextStates(State<p
     vector<State<pair<int, int>>*> result;
     int i = current.getState().first;
     int j = current.getState().second;
+    int fatherI = current.getFather()->getState().first;
+    int fatherJ = current.getFather()->getState().second;
     //if the index exist and the value isn't minus one, which is infinity
-    if (i > 0 && matrixStates[i-1][j] >= 0) {
+    if (i > 0 && matrixStates[i-1][j] >= 0 && fatherI != i-1) {
         result.push_back(new State<pair<int,int>>(std::make_pair(i - 1, j), current.getCost() + matrixStates[i-1][j], &current, UP));
     }
-    if (i < width && matrixStates[i+1][j] >= 0) {
+    if (i < width && matrixStates[i+1][j] >= 0 && fatherI != i+1) {
         result.push_back(new State<pair<int,int>>(std::make_pair(i + 1, j), current.getCost() + matrixStates[i+1][j], &current, DOWN));
     }
-    if (j > 0 && matrixStates[i][j-1] >= 0) {
+    if (j > 0 && matrixStates[i][j-1] >= 0 && fatherJ != j-1) {
         result.push_back(new State<pair<int,int>>(std::make_pair(i, j - 1), current.getCost() + matrixStates[i][j-1], &current, LEFT));
     }
-    if (j < length && matrixStates[i][j+1] >= 0) {
+    if (j < length && matrixStates[i][j+1] >= 0 && fatherJ != j+1) {
         result.push_back(new State<pair<int,int>>(std::make_pair(i, j + 1), current.getCost() + matrixStates[i][j+1], &current, RIGHT));
     }
     return result;
@@ -31,24 +33,26 @@ vector<State<pair<int, int>>*> MyMatrixSearchable::getPossibleNextStates(State<p
     vector<State<pair<int, int>>*> result;
     int i = current.getState().first;
     int j = current.getState().second;
+    int fatherI = current.getFather()->getState().first;
+    int fatherJ = current.getFather()->getState().second;
     int manhattanDisCurrent = std::abs(goal.getState().first - i) + std::abs(goal.getState().second - j);
     //if the index exist and the value isn't minus one, which is infinity
-    if (i > 0 && matrixStates[i-1][j] >= 0) {
+    if (i > 0 && matrixStates[i-1][j] >= 0 && fatherI != i-1) {
         int manhattanDistance = std::abs(goal.getState().first - (i - 1)) + std::abs(goal.getState().second - (j));
         manhattanDistance = std::abs(manhattanDistance - manhattanDisCurrent);
         result.push_back(new State<pair<int,int>>(std::make_pair(i - 1, j), current.getCost() + matrixStates[i-1][j] + manhattanDistance, &current, UP));
     }
-    if (i < width && matrixStates[i+1][j] >= 0) {
+    if (i < width && matrixStates[i+1][j] >= 0 && fatherI != i+1) {
         int manhattanDistance = std::abs(goal.getState().first - (i + 1)) + std::abs(goal.getState().second - (j));
         manhattanDistance = std::abs(manhattanDistance - manhattanDisCurrent);
         result.push_back(new State<pair<int,int>>(std::make_pair(i + 1, j), current.getCost() + matrixStates[i+1][j] + manhattanDistance, &current, DOWN));
     }
-    if (j > 0 && matrixStates[i][j-1] >= 0) {
+    if (j > 0 && matrixStates[i][j-1] >= 0 && fatherJ != j-1) {
         int manhattanDistance = std::abs(goal.getState().first - (i)) + std::abs(goal.getState().second - (j - 1));
         manhattanDistance = std::abs(manhattanDistance - manhattanDisCurrent);
         result.push_back(new State<pair<int,int>>(std::make_pair(i, j - 1), current.getCost() + matrixStates[i][j-1] + manhattanDistance, &current, LEFT));
     }
-    if (j < length && matrixStates[i][j+1] >= 0) {
+    if (j < length && matrixStates[i][j+1] >= 0 && fatherJ != j+1) {
         int manhattanDistance = std::abs(goal.getState().first - (i)) + std::abs(goal.getState().second - (j + 1));
         manhattanDistance = std::abs(manhattanDistance - manhattanDisCurrent);
         result.push_back(new State<pair<int,int>>(std::make_pair(i, j + 1), current.getCost() + matrixStates[i][j+1] + manhattanDistance, &current, RIGHT));

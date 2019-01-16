@@ -13,7 +13,7 @@ class BFSSearcher : public QueueBasedSearcher<solution, T>{
 
 public:
 
-    virtual std::queue<State<T>*> search(ISearchable<T> *searchable) {
+    virtual string search(ISearchable<T> *searchable) {
         this->addToOpenList(searchable->getInitialState());
         //as long there is a node in the queue
         while (this->getOpenListSize() > 0) {
@@ -31,7 +31,7 @@ public:
 
             }
         }
-        return NULL;
+        return "-1";
     }
 };
 

@@ -10,6 +10,7 @@
 #include <unordered_set>
 #include <queue>
 
+using namespace std;
 
 template <class solution, class T>
 
@@ -20,8 +21,8 @@ private:
 
 protected:
 
-    std::stack<State<T>*> openList;
-    std::unordered_set<State<T>*> closedList;
+    stack<State<T>*> openList;
+    unordered_set<State<T>*> closedList;
 
     State<T> *popOpenList() {
         ++evaluatedNodes;
@@ -30,17 +31,38 @@ protected:
         return result;
     }
 
-    std::queue<State<T>*> backTrace(State<T> *current, ISearchable<T> *searchable) {
-        std::queue<State<T> *> trace;
+    string backTrace(State<T> *current, ISearchable<T> *searchable) {
+        stack<State<T> *> trace;
         State<T> *tempState = current;
+        string result = "";
 
-        while (!(*tempState == searchable->getInitialState())) {
-            trace.push_front(tempState);
+        while (!(*tempState == *searchable->getInitialState())) {
+            trace.push(tempState);
             tempState = tempState->getFather();
         }
-        trace.push_front(searchable->getInitialState());
+        trace.push(searchable->getInitialState());
 
-        return trace;
+        while (!trace.empty()) {
+            switch (trace.top()->getDirection()) {
+                case UP:
+                    result += "Up,";
+                    break;
+                case DOWN:
+                    result += "Down,";
+                    break;
+                case LEFT:
+                    result += "Left,";
+                    break;
+                case RIGHT:
+                    result += "Right,";
+                    break;
+                default:
+                    break;
+            }
+            trace.pop();
+        }
+        result.pop_back();
+        return result;
     }
 
     unsigned long getOpenListSize() {
@@ -53,7 +75,7 @@ protected:
 
     bool isInOpenList(State<T> *current) {
         bool isFound = false;
-        std::stack<State<T>*> temp;
+        stack<State<T>*> temp;
         while (!openList.empty()) {
             if (openList.top() == *current) {
                 isFound = true;

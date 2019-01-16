@@ -30,7 +30,9 @@ public:
 
     T getState() {return current;}
 
-    State<T> *getFather() {return *father;}
+    State<T> *getFather() {return father;}
+
+    Direction getDirection() { return direction; }
 
     //overloading the operator instead of creating function called "Equal"
     bool operator==(State<T> another) {return (getState() == another.getState());}

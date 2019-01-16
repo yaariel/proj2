@@ -14,7 +14,7 @@ class AStarSearcher : public PriorityBasedSearcher<solution, T> {
 
 public:
 
-    std::queue<State<T>*> search(ISearchable<T> *searchable) {
+    virtual string search(ISearchable<T> *searchable) {
         //adding the initalState to the open list.
         this->addToOpenList(searchable->getInitialState());
         while (this->getOpenListSize() > 0) {
@@ -25,7 +25,6 @@ public:
             if (*nodeToDevelop == *searchable->getGoalState()) {
                 return this->backTrace(nodeToDevelop, searchable);
             }
-            //todo: checking if needed to change the constructor
             State<T> *father = new State<T>(*nodeToDevelop);
             std::vector<State<T>*> successors = searchable->getPossibleNextStates(*father, *searchable->getGoalState());
             for (auto *successor : successors) {
@@ -37,7 +36,7 @@ public:
                 }
             }
         }
-        return NULL;
+        return "-1";
     }
 
 
