@@ -7,6 +7,7 @@
 
 
 #include <string>
+#include <vector>
 #include "IClientHandler.h"
 #include "ISolver.h"
 #include "ICacheManager.h"
@@ -17,9 +18,11 @@ public:
 
     virtual ~MyTestClientHandler();
 
+    MyTestClientHandler(ISolver<vector<string>, string> *solver, ICacheManager<vector<string>, string> *cacheManager) : solver(solver), cacheManager(cacheManager) {}
+
 private:
-    ISolver<string, string> *solver;
-    ICacheManager<string, string> *cacheManager;
+    ISolver<vector<string>, string> *solver;
+    ICacheManager<vector<string>, string> *cacheManager;
 };
 
 

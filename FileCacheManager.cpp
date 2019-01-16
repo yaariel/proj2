@@ -2,6 +2,7 @@
 // Created by frieddv on 1/8/19.
 //
 
+#include <sstream>
 #include "FileCacheManager.h"
 
 
@@ -12,10 +13,10 @@ void FileCacheManager::loadFromFile() {
     }
     string buffer;
     while (getline(input, buffer)) {
-        unsigned long delimiter = buffer.find('$');
-        string splitProblem = buffer.substr(0, delimiter);
-        string splitSolution = buffer.substr(delimiter + 1, buffer.size() - delimiter);
-        records[splitProblem] = splitSolution;
+        unsigned long delimiter = buffer.find_last_of('$');
+        string problem = buffer.substr(0, delimiter);
+        string solution = buffer.substr(delimiter + 1, buffer.size() - delimiter);
+        records[parseProblem(problem)] = solution;
     }
     input.close();
 }
@@ -27,7 +28,19 @@ void FileCacheManager::saveToFile() {
     }
     //write into file the keys with '$' as delimiter between the problem
     for (auto key : records) {
-        writer << key.first << '$' << key.second << endl;
+        for (string line : key.first)
+            writer << line << DELIMITER;
+        writer << DELIMITER << key.second << endl;
     }
     writer.close();
+}
+
+vector<string> FileCacheManager::parseProblem(string problem) {
+    vector<string> parsedProblem;
+    string line;
+    stringstream ss(problem);
+    while (getline(ss, line, DELIMITER)) {
+        parsedProblem.push_back(line);
+    }
+    return parsedProblem;
 }

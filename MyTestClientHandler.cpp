@@ -3,70 +3,56 @@
 //
 #define BUFFER_SIZE 1024
 #define END_OF_COMMUNICATION "end"
+#define DELIMITER '\n'
 
 #include <strings.h>
 #include <sys/socket.h>
 #include <unistd.h>
+#include <sstream>
+#include <algorithm>
 #include "MyTestClientHandler.h"
 
 void MyTestClientHandler::handleClient(int socket) {
 
     //enter into string the info from the socket
-    string problem = "";
+    vector<string> problem;
+    string currentProblem = "";
+    string temp = "";
     string solution;
     char buffer[BUFFER_SIZE] = {0};
 
     while (true)
     {
-        int numBytesRead = recv(socket, buffer, BUFFER_SIZE, 0);
+        ssize_t numBytesRead = recv(socket, buffer, BUFFER_SIZE, 0);
 
         if (numBytesRead > 0) {
             string check = buffer;
-            unsigned long newlineIndex = check.find('\n');
-            if (newlineIndex != string::npos) {
-                problem += check.substr(0, newlineIndex);
-                check = check.substr(newlineIndex + 1);
-                if (problem.length() > 0) {
-
-                    if (!problem.compare(END_OF_COMMUNICATION)) {
-                        close(socket);
-                        return;
-                    }
+            stringstream ss(check);
+            ssize_t lineAmount = count(check.begin(), check.end(), DELIMITER);
+            for (ssize_t i = 0; i < lineAmount; ++i) {
+                getline(ss, currentProblem, DELIMITER);
+                if (!temp.empty()) {
+                    temp += currentProblem;
+                    currentProblem = temp;
+                    temp = "";
+                }
+                if (currentProblem == END_OF_COMMUNICATION) {
                     if (cacheManager->isSolutionSaved(problem)) {
-                        //enter the solution to solution for returning to client
                         solution = cacheManager->getSolution(problem);
-                    } else {
-                        //enter the solution from solver to string
+                    }
+                    else {
                         solution = solver->solve(problem);
                         cacheManager->saveSolution(problem, solution);
                     }
-
-                    ssize_t n;
-
-                    //send the message throw socket
-                    n = write(socket, solution.c_str(), solution.length());
-
-                    //if writing didn't work
-                    if (n < 0) {
-                        close(socket);
-                        return;
-                    }
-
-                    //if check still has data, save it to next run and reset check
-                    if (check.length() > 0) {
-                        problem = check;
-                        check = "";
-                    }
-                    //else, reset problem
-                    else {
-                        problem = "";
-                    }
+                    write(socket, solution.c_str(), solution.length());
+                    close(socket);
+                    return;
                 }
-
+                problem.push_back(currentProblem);
             }
-            //add the 'remainder' to problem for next run
-            if (check.length() > 0)
-                problem += check;
+            //if we have half a line, save it, otherwise clear it
+            if (!getline(ss, temp, DELIMITER))
+                temp = "";
         }
     }
 
