@@ -33,7 +33,6 @@ public:
                     this->addToOpenList(successor);
                 }
             }
-            successors.clear();
         }
         this->deleteEverything();
         return "-1";

@@ -37,11 +37,7 @@ public:
                 } else if (!this->isInOpenList(successor)) {
                     this->updateStatePriority(successor);
                 }
-                //delete here instead
-                delete successor;
             }
-
-            //successors.clear();
         }
         this->deleteEverything();
         return "-1";
