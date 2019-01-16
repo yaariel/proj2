@@ -50,9 +50,9 @@ void MyTestClientHandler::handleClient(int socket) {
                 }
                 problem.push_back(currentProblem);
             }
-            //if we have half a line, save it, otherwise clear it
-            if (!getline(ss, temp, DELIMITER))
-                temp = "";
+            //if we have half a line, save it
+            if (getline(ss, currentProblem, DELIMITER))
+                temp += currentProblem;
         }
     }
 
