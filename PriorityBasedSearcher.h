@@ -114,9 +114,8 @@ protected:
     }
 
     void deleteEverything() {
-        openList.erase(openList.begin(), openList.end());
-        for (auto item : closedList)
-            delete item;
+        openList.clear();
+        closedList.clear();
     }
 
 

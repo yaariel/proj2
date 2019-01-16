@@ -35,10 +35,7 @@ public:
                 } else if (!this->isInOpenList(successor)) {
                     this->updateStatePriority(successor);
                 }
-                //added to fix
-                delete successor;
             }
-            //successors.clear();
         }
         this->deleteEverything();
         return "-1";

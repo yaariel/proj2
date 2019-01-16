@@ -106,7 +106,7 @@ protected:
             openList.pop();
             delete item;
         }
-        delete[] closedList;
+        closedList.clear();
     }
 
 
