@@ -16,7 +16,7 @@ public:
 
     solution search(ISearchable<T> *searchable) {
         //adding the initalState to the open list.
-        addToOpenList(searchable->getInitialState());
+        this->addToOpenList(searchable->getInitialState());
         while (this->getOpenListSize() > 0) {
             //start develop the node
             State<T> *nodeToDevelop = this->popOpenList();
@@ -29,11 +29,11 @@ public:
             State<T> *father = new State<T>(*nodeToDevelop);
             std::vector<State<T>*> successors = searchable->getPossibleNextStates(father, searchable->getGoalState());
             for (auto *successor : successors) {
-                if (!isInClosedList(successor) && !isInOpenList(successor)) {
-                    successor->setFather(*father);
-                    addToOpenList(successor);
-                } else if (!isInOpenList(successor)) {
-                    updateStatePriority(successor);
+                if (!this->isInClosedList(successor) && !this->isInOpenList(successor)) {
+                    successor->setFather(father);
+                    this->addToOpenList(successor);
+                } else if (!this->isInOpenList(successor)) {
+                    this->updateStatePriority(successor);
                 }
             }
         }

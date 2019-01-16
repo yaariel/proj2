@@ -5,7 +5,7 @@
 #ifndef PROJ2_FILECACHEMANAGER_H
 #define PROJ2_FILECACHEMANAGER_H
 
-#define DELIMITER '$'
+#define CACHE_DELIMITER '$'
 
 #include "ICacheManager.h"
 #include <fstream>

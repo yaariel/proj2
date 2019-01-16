@@ -16,8 +16,8 @@ void MyTestClientHandler::handleClient(int socket) {
 
     //enter into string the info from the socket
     vector<string> problem;
-    string currentProblem = "";
-    string temp = "";
+    string currentLine = "";
+    string previousLine = "";
     string solution;
     char buffer[BUFFER_SIZE] = {0};
 
@@ -30,13 +30,13 @@ void MyTestClientHandler::handleClient(int socket) {
             stringstream ss(check);
             ssize_t lineAmount = count(check.begin(), check.end(), DELIMITER);
             for (ssize_t i = 0; i < lineAmount; ++i) {
-                getline(ss, currentProblem, DELIMITER);
-                if (!temp.empty()) {
-                    temp += currentProblem;
-                    currentProblem = temp;
-                    temp = "";
+                getline(ss, currentLine, DELIMITER);
+                if (!previousLine.empty()) {
+                    previousLine += currentLine;
+                    currentLine = previousLine;
+                    previousLine = "";
                 }
-                if (currentProblem == END_OF_COMMUNICATION) {
+                if (currentLine == END_OF_COMMUNICATION) {
                     if (cacheManager->isSolutionSaved(problem)) {
                         solution = cacheManager->getSolution(problem);
                     }
@@ -48,11 +48,11 @@ void MyTestClientHandler::handleClient(int socket) {
                     close(socket);
                     return;
                 }
-                problem.push_back(currentProblem);
+                problem.push_back(currentLine);
             }
             //if we have half a line, save it
-            if (getline(ss, currentProblem, DELIMITER))
-                temp += currentProblem;
+            if (getline(ss, currentLine, DELIMITER))
+                previousLine += currentLine;
         }
     }
 
