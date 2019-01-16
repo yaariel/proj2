@@ -1,0 +1,291 @@
+commit 70f6e657a9b9b0e798d390095f40c40c10c86a3f
+Author: Ariel Yaaran <ariel.yaaran@hotmail.com>
+Date:   Wed Jan 16 23:42:43 2019 +0200
+
+    fix the fix of best-first
+
+commit 4b2bb054af348a4f7984db26fab5850a9e906800
+Merge: 406c8f1 b1471bb
+Author: Ariel Yaaran <ariel.yaaran@hotmail.com>
+Date:   Wed Jan 16 23:41:36 2019 +0200
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 406c8f1ac034a55199a4d9b51f5226c3d4eab8c5
+Author: Ariel Yaaran <ariel.yaaran@hotmail.com>
+Date:   Wed Jan 16 23:41:23 2019 +0200
+
+    this one really works!
+
+commit b1471bb9d2ae765a16db553aef9d05f00a0cc30b
+Author: Dvir Fred <friedvir1@gmail.com>
+Date:   Wed Jan 16 23:21:30 2019 +0200
+
+    fixing Best-first
+
+commit 5c772a0b6771d60371b4cc035b77de071d82fd88
+Author: Ariel Yaaran <ariel.yaaran@hotmail.com>
+Date:   Wed Jan 16 23:13:39 2019 +0200
+
+    fix another error
+
+commit 574a681c9995df27ca7be4d5042b1064e5557ecd
+Author: Dvir Fred <friedvir1@gmail.com>
+Date:   Wed Jan 16 23:12:09 2019 +0200
+
+    fixing A*
+
+commit e6d8f0cd905a9562d11085774d36bbb6f64746e4
+Author: Ariel Yaaran <ariel.yaaran@hotmail.com>
+Date:   Wed Jan 16 23:00:21 2019 +0200
+
+    fix errors
+
+commit 235c475087c739d3a15e4c78500fce4f934b291c
+Author: Ariel Yaaran <ariel.yaaran@hotmail.com>
+Date:   Wed Jan 16 21:03:25 2019 +0200
+
+    finish working on compilation errors
+
+commit 4153f3bd6a32a0dfc8690b2ff65c2eb68d320537
+Author: Ariel Yaaran <ariel.yaaran@hotmail.com>
+Date:   Wed Jan 16 17:00:13 2019 +0200
+
+    Compilable!!
+
+commit 207e01ae5a271afabde6bae637695194947eaa15
+Author: Ariel Yaaran <ariel.yaaran@hotmail.com>
+Date:   Wed Jan 16 16:36:57 2019 +0200
+
+    almost compilable!
+
+commit a4a1c45a3ca66b5dfa83d0c8121a7c29cdaf4fdd
+Author: Ariel Yaaran <ariel.yaaran@hotmail.com>
+Date:   Wed Jan 16 15:26:50 2019 +0200
+
+    fixing compilation errors
+
+commit b48804c9d27d83a9d97c244304c555336a60da3f
+Author: Ariel Yaaran <ariel.yaaran@hotmail.com>
+Date:   Wed Jan 16 14:02:46 2019 +0200
+
+    fix some compilation errors
+
+commit a4a4780821b8db76c643f30c1c90000e7292d288
+Author: Ariel Yaaran <ariel.yaaran@hotmail.com>
+Date:   Wed Jan 16 06:04:33 2019 +0200
+
+    fix partial message handling
+
+commit 93ce0fe820b267559da70cab43482eebfc3bd2f7
+Merge: 324a08e 6f99e6a
+Author: Dvir Fred <friedvir1@gmail.com>
+Date:   Wed Jan 16 09:32:21 2019 +0200
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 324a08ed97f3bc7406fb13df4b26b71534a7179f
+Author: Dvir Fred <friedvir1@gmail.com>
+Date:   Wed Jan 16 09:31:50 2019 +0200
+
+    fixing to be pointer
+
+commit 6f99e6ad092279c0074b3338c8b260317c726e41
+Author: Ariel Yaaran <ariel.yaaran@hotmail.com>
+Date:   Wed Jan 16 05:34:03 2019 +0200
+
+    ClientHandler, FileCacheManager, and some peripheral fixes
+
+commit 27a59b5973e45964d64716cb238d3627b5680e41
+Author: Dvir Fred <friedvir1@gmail.com>
+Date:   Tue Jan 15 21:47:43 2019 +0200
+
+    taking care for backtrace func in all the searchers
+
+commit fd7f41e89831ff92be74ceba4a1dde694f31469b
+Merge: eb9babe 522999d
+Author: Dvir Fred <friedvir1@gmail.com>
+Date:   Tue Jan 15 21:35:40 2019 +0200
+
+    Merge remote-tracking branch 'origin/master'
+
+commit eb9babef7f5c8a0972a7150d4e1cb15a1ed0cfdd
+Author: Dvir Fred <friedvir1@gmail.com>
+Date:   Tue Jan 15 21:35:07 2019 +0200
+
+    taking care for backtrace func in all the searchers
+
+commit 522999dca589fde53b57a20b4736a51f443697e3
+Author: Ariel Yaaran <ariel.yaaran@hotmail.com>
+Date:   Tue Jan 15 20:57:03 2019 +0200
+
+    stop tracking cmake-build-debug
+
+commit cb071558a9b1d00a9d304d450252c595c9fbde04
+Author: Dvir Fred <friedvir1@gmail.com>
+Date:   Tue Jan 15 20:10:36 2019 +0200
+
+    fix parallel to new instructions and creating the connection between searcher to solver
+
+commit 9264c63eb2e5974e4f305311e2ea7a6a627a888b
+Author: Ariel Yaaran <ariel.yaaran@hotmail.com>
+Date:   Tue Jan 15 19:26:42 2019 +0200
+
+    TCPServer, ParallelServer
+
+commit b444643bf88ef3d069aafe5917941ed5fc773f99
+Author: Ariel Yaaran <ariel.yaaran@hotmail.com>
+Date:   Tue Jan 15 19:15:09 2019 +0200
+
+    ignore local directory diff (some changes will need to be done manually)
+
+commit 82077fe631e79cf6a816daf795c2b074cda328cf
+Author: Dvir Fred <friedvir1@gmail.com>
+Date:   Tue Jan 15 18:58:43 2019 +0200
+
+    fixing BFS to a working one
+
+commit 5944c7b7deef72c0991fe34913850832ac5b8f3f
+Author: Dvir Fred <friedvir1@gmail.com>
+Date:   Tue Jan 15 18:47:53 2019 +0200
+
+    fixing all searchers
+
+commit 24a092f1d55b14fbe57f1d619e449b80c2f0c110
+Author: Dvir Fred <friedvir1@gmail.com>
+Date:   Tue Jan 15 16:11:50 2019 +0200
+
+    fixing BFs and DFs
+
+commit 72506ad4656af6e8996e5abf6ee451fe81045393
+Author: Dvir Fred <friedvir1@gmail.com>
+Date:   Tue Jan 15 13:32:39 2019 +0200
+
+    fixing and DFS, BFS
+
+commit c4cd6e69d58e9b2a6125bcf7e666f35dc8ead0cb
+Author: Ariel Yaaran <ariel.yaaran@hotmail.com>
+Date:   Mon Jan 14 22:24:17 2019 +0200
+
+    make MatrixFactory a static class
+
+commit c0c2d5e1a953183e0a3b8cd6c1479c0c458cb506
+Author: Dvir Fred <friedvir1@gmail.com>
+Date:   Tue Jan 15 01:29:54 2019 +0200
+
+    Best-first_algorithm && A*_algorithm && fixing heuristic into get possibleNextStates
+    some fixing, maybe not needed and return to last ones
+
+commit c22d954c5f9cb602ff9a5b54df42eb8b9d908b25
+Author: Dvir Fred <friedvir1@gmail.com>
+Date:   Tue Jan 15 01:25:02 2019 +0200
+
+    Best-first_algorithm && A*_algorithm && fixing heuristic into get possibleNextStates
+
+commit a655a430813aac37adb6735c713177c7966ee77d
+Author: Dvir Fred <friedvir1@gmail.com>
+Date:   Mon Jan 14 20:14:17 2019 +0200
+
+    the Best-first_algorithm
+
+commit 7cbf495ee8fc738d5585015446bc5c980ca230b8
+Author: ariel <ariel.yaaran@hotmail.com>
+Date:   Mon Jan 14 10:49:50 2019 +0200
+
+    fix MatrixFactory and clean its code
+
+commit b0fa291ca7efc54d366ff213c1a8e447d2c5189f
+Author: Dvir Fred <friedvir1@gmail.com>
+Date:   Sun Jan 13 20:53:12 2019 +0200
+
+    fixing little problems
+
+commit 1ef3c9b5c5687206d2f702f566a93e94133a1311
+Author: Dvir Fred <friedvir1@gmail.com>
+Date:   Sun Jan 13 18:30:15 2019 +0200
+
+    working on factory for matrix
+
+commit 97a94de42ca7d0ee1035339f6aa5965160cb041e
+Author: Dvir Fred <friedvir1@gmail.com>
+Date:   Sun Jan 13 13:38:13 2019 +0200
+
+    working of a lot of stuff together
+
+commit 3b070f815ecff91ac62c1f992413609da9cf2ebe
+Author: Dvir Fred <friedvir1@gmail.com>
+Date:   Sat Jan 12 22:46:47 2019 +0200
+
+    fixing cmake
+
+commit 9d25efd56486dc54a1b837762fb1b098af46ce19
+Author: Dvir Fred <friedvir1@gmail.com>
+Date:   Sat Jan 12 22:30:35 2019 +0200
+
+    ...
+
+commit d7085e4d7e9cdfa620e94dfdf739addce02335e1
+Author: Dvir Fred <friedvir1@gmail.com>
+Date:   Sat Jan 12 21:54:23 2019 +0200
+
+    making the ground and structure for Algorithms
+
+commit de797ddd0bc791879718ca7f20888613dba6cbb9
+Author: Dvir Fried <friedvir1@gmail.com>
+Date:   Fri Jan 11 00:23:09 2019 +0200
+
+    cmake-build-debug pushing
+
+commit 8455b4d1f94fe555502a959b3038bf9370d55209
+Author: Ariel Yaaran <ariel.yaaran@hotmail.com>
+Date:   Fri Jan 11 00:10:51 2019 +0200
+
+    general improvements to code and readability
+
+commit 6f96f820a702863eb0c338392961f15c6622d8bc
+Author: Dvir Fred <friedvir1@gmail.com>
+Date:   Thu Jan 10 19:43:10 2019 +0200
+
+    adding some comments and explanation for reading
+
+commit 48d574b5bfd21756c93d9ed1a23426a2c0cc14ca
+Author: Dvir Fred <friedvir1@gmail.com>
+Date:   Thu Jan 10 13:08:06 2019 +0200
+
+    working on part 3 in the project making searcers element needed for abstract searching problems
+
+commit bf18072f516012db315a20506fbbdd03a9bf7921
+Author: Dvir Fred <friedvir1@gmail.com>
+Date:   Thu Jan 10 11:31:57 2019 +0200
+
+    fixing something in filecachemanager
+
+commit ed7a9f1e32a7cc8eab3b7145d77d06be205cdb1a
+Author: Dvir Fred <friedvir1@gmail.com>
+Date:   Wed Jan 9 00:46:39 2019 +0200
+
+    fixing the name to socket
+
+commit 9ac2c7300ade968c892ea0b46656073f77ff2d1f
+Author: Dvir Fred <friedvir1@gmail.com>
+Date:   Tue Jan 8 23:59:59 2019 +0200
+
+    working on reading and writing from socket
+
+commit 18ed3fdef20ef597e11f303f0ab1303877b43ba3
+Author: Dvir Fried <friedvir1@gmail.com>
+Date:   Tue Jan 8 21:22:20 2019 +0200
+
+    the start of project 2, part 1
+
+commit 067c3eef88c531a8e2e0903cfa288be1ae0d1df6
+Author: Ariel Yaaran <ariel.yaaran@hotmail.com>
+Date:   Tue Jan 8 20:58:21 2019 +0200
+
+    ignore CLion
+
+commit 360ae71483a962f88f569ac0a674c38e02c3a876
+Author: MrCombustibleLemon <45976749+MrCombustibleLemon@users.noreply.github.com>
+Date:   Mon Dec 31 22:53:39 2018 +0200
+
+    Initial commit
