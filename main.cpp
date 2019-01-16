@@ -22,7 +22,6 @@ int main(int argc, char *argv[]) {
         throw invalid_argument("invalid arguments to main");
     server_side::IServer *server = new server_side::MyParallelServer();
     server->open(stoi(argv[1]), new MyTestClientHandler((ISolver<string, string>*)new SearcherSolver(), (ICacheManager<string, string>*)new FileCacheManager("cache.txt")));
-    this_thread::sleep_for(chrono::seconds(100));
     server->stop();
     delete server;
     return 0;

@@ -23,7 +23,9 @@ public:
             this->closedList.push_back(nodeToDevelop);
             //if we got to the goal
             if (*nodeToDevelop == *searchable->getGoalState()) {
-                return this->backTrace(nodeToDevelop, searchable);
+                string result = this->backTrace(nodeToDevelop, searchable);
+                this->deleteEverything();
+                return result;
             }
             State<T> *father = new State<T>(*nodeToDevelop);
             std::vector<State<T>*> successors = searchable->getPossibleNextStates(*father, *searchable->getGoalState());
@@ -36,6 +38,7 @@ public:
                 }
             }
         }
+        this->deleteEverything();
         return "-1";
     }
 

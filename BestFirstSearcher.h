@@ -23,20 +23,23 @@ public:
             this->closedList.push_back(nodeToDevelop);
             //if we got to the goal
             if (*nodeToDevelop == *searchable->getGoalState()) {
-                return this->backTrace(nodeToDevelop, searchable);
+                string result = this->backTrace(nodeToDevelop, searchable);
+                this->deleteEverything();
+                return result;
             }
             //todo: checking if needed to change the constructor
             State<T> *father = new State<T>(*nodeToDevelop);
-            std::vector<State<T>*> successors = searchable->getPossibleNextStates(father);
-            for (auto *successor : successors) {
+            std::vector<State<T>*> successors = searchable->getPossibleNextStates(*father);
+            for (auto successor : successors) {
                 if (!this->isInClosedList(successor) && !this->isInOpenList(successor)) {
-                    successor->setFather(*father);
+                    successor->setFather(father);
                     this->addToOpenList(successor);
                 } else if (!this->isInOpenList(successor)) {
                     this->updateStatePriority(successor);
                 }
             }
         }
+        this->deleteEverything();
         return "-1";
     }
 

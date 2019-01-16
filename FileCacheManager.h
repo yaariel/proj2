@@ -21,6 +21,7 @@ private:
 
     unordered_map<string, string> records;
     string path;
+    pthread_mutex_t mutex;
 
     void loadFromFile();
 
@@ -31,7 +32,11 @@ public:
     FileCacheManager(const string &path): path(path) { loadFromFile(); }
 
     virtual bool isSolutionSaved(string problem) {
-        return (bool) (records.count(problem));
+        unsigned long count;
+        pthread_mutex_lock(&mutex);
+        count = records.count(problem);
+        pthread_mutex_unlock(&mutex);
+        return (bool)count;
     }
 
     virtual string getSolution(string problem) {
@@ -42,7 +47,7 @@ public:
         records[problem] = solution;
     }
 
-    virtual ~FileCacheManager() {saveToFile();}
+    virtual ~FileCacheManager() {saveToFile(); pthread_mutex_destroy(&mutex);}
 
 };
 

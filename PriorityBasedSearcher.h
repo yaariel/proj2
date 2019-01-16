@@ -113,6 +113,12 @@ protected:
             openList.insert(current);
     }
 
+    void deleteEverything() {
+        openList.erase(openList.begin(), openList.end());
+        for (auto item : closedList)
+            delete item;
+    }
+
 
 public:
 

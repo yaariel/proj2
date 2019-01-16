@@ -19,10 +19,12 @@ public:
         while (this->getOpenListSize() > 0) {
             State<T> *nodeToDevelop = this->popOpenList();
             if (*nodeToDevelop == *searchable->getGoalState()) {
-                return this->backTrace(nodeToDevelop, searchable);
+                string result = this->backTrace(nodeToDevelop, searchable);
+                this->deleteEverything();
+                return result;
             }
 
-            std::vector<State<T>*> successors = searchable->getPossibleNextStates(nodeToDevelop);
+            std::vector<State<T>*> successors = searchable->getPossibleNextStates(*nodeToDevelop);
             for (auto successor : successors) {
                 if (!this->isInClosedList(successor)) {
                     this->addToOpenList(successor);
@@ -31,6 +33,7 @@ public:
 
             }
         }
+        this->deleteEverything();
         return "-1";
     }
 };

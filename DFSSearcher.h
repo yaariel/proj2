@@ -6,31 +6,35 @@
 #define PROJ2_DFSSEARCHER_H
 
 #include "StackBasedSearcher.h"
+#include <string>
 
 template <class solution, class T>
 
 class DFSSearcher: public StackBasedSearcher<solution, T> {
 
 public:
-    virtual string search(ISearchable<T> *searchable) {
+    virtual std::string search(ISearchable<T> *searchable) {
         this->addToOpenList(searchable->getInitialState());
         //as long there is a node in the queue
         while (this->getOpenListSize() > 0) {
             State<T> *nodeToDevelop = this->popOpenList();
             if (*nodeToDevelop == *searchable->getGoalState()) {
-                return this->backTrace(nodeToDevelop, searchable);
+                string result = this->backTrace(nodeToDevelop, searchable);
+                this->deleteEverything();
+                return result;
             }
             if (!this->isInClosedList(nodeToDevelop)) {
-                this->addToCloseList(nodeToDevelop);
+                this->closedList.push_back(nodeToDevelop);
             }
 
-            std::vector<State<T>*> successors = searchable->getPossibleNextStates(nodeToDevelop);
+            std::vector<State<T>*> successors = searchable->getPossibleNextStates(*nodeToDevelop);
             for (auto successor : successors) {
                 if (!this->isInClosedList(successor) && !this->isInOpenList(successor)) {
                     this->addToOpenList(successor);
                 }
             }
         }
+        this->deleteEverything();
         return "-1";
     }
 };

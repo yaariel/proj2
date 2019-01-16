@@ -7,7 +7,7 @@
 
 #include "ISearcher.h"
 #include <stack>
-#include <unordered_set>
+#include <vector>
 #include <queue>
 
 using namespace std;
@@ -22,7 +22,7 @@ private:
 protected:
 
     stack<State<T>*> openList;
-    unordered_set<State<T>*> closedList;
+    vector<State<T>*> closedList;
 
     State<T> *popOpenList() {
         ++evaluatedNodes;
@@ -45,16 +45,16 @@ protected:
         while (!trace.empty()) {
             switch (trace.top()->getDirection()) {
                 case UP:
-                    result += "Up,";
+                    result += "up,";
                     break;
                 case DOWN:
-                    result += "Down,";
+                    result += "down,";
                     break;
                 case LEFT:
-                    result += "Left,";
+                    result += "left,";
                     break;
                 case RIGHT:
-                    result += "Right,";
+                    result += "right,";
                     break;
                 default:
                     break;
@@ -77,7 +77,7 @@ protected:
         bool isFound = false;
         stack<State<T>*> temp;
         while (!openList.empty()) {
-            if (openList.top() == *current) {
+            if (*openList.top() == *current) {
                 isFound = true;
                 break;
             }
@@ -98,6 +98,26 @@ protected:
             }
         }
         return false;
+    }
+
+    void deleteEverything() {
+        while (!openList.empty()) {
+            auto item = openList.top();
+            openList.pop();
+            delete item;
+        }
+        delete[] closedList;
+    }
+
+
+public:
+
+    StackBasedSearcher() : evaluatedNodes(0) {};
+
+    virtual solution search(ISearchable<T> *searchable) = 0;
+
+    virtual unsigned long getNumberOfNodesEvaluated() {
+        return evaluatedNodes;
     }
 };
 

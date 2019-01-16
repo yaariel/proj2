@@ -42,16 +42,16 @@ protected:
         while (!trace.empty()) {
             switch (trace.top()->getDirection()) {
                 case UP:
-                    result += "Up,";
+                    result += "up,";
                     break;
                 case DOWN:
-                    result += "Down,";
+                    result += "down,";
                     break;
                 case LEFT:
-                    result += "Left,";
+                    result += "left,";
                     break;
                 case RIGHT:
-                    result += "Right,";
+                    result += "right,";
                     break;
                 default:
                     break;
@@ -98,6 +98,26 @@ protected:
             }
         }
         return false;
+    }
+
+    void deleteEverything() {
+        while (!openList.empty()) {
+            auto item = openList.front();
+            openList.pop();
+            delete item;
+        }
+        delete[] closedList;
+    }
+
+
+public:
+
+    QueueBasedSearcher() : evaluatedNodes(0) {};
+
+    virtual solution search(ISearchable<T> *searchable) = 0;
+
+    virtual unsigned long getNumberOfNodesEvaluated() {
+        return evaluatedNodes;
     }
 
 };

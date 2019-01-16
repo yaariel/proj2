@@ -55,8 +55,6 @@ void MyTestClientHandler::handleClient(int socket) {
                 previousLine += currentLine;
         }
     }
-
-
 }
 
 MyTestClientHandler::~MyTestClientHandler() {
