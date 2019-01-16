@@ -14,12 +14,13 @@
 #include <vector>
 #include <string>
 
-class SearcherSolver : public ISolver<std::vector<std::string>, std::string> {
+using namespace std;
+
+class SearcherSolver : public ISolver<vector<string>, string> {
 public:
 
-    virtual std::string solve(std::vector<std::string> problem) {
-        SearchableMatrixFactory *factory = new SearchableMatrixFactory();
-        MyMatrixSearchable matrixProblem = factory->createMatrix(problem);
+    virtual string solve(vector<string> problem) {
+        MyMatrixSearchable matrixProblem = SearchableMatrixFactory::createMatrix(problem);
         //todo: need to change it to vector of pair<int, int> instead of string as solution
         //todo: maybe changing the return value of matrixProblem to vector of states instead of string
         ISearcher<string, pair<int, int>> *bestFS = new AStarSearcher<string, pair<int, int>>();
