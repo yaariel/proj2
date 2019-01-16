@@ -24,7 +24,9 @@ public:
         //todo: need to change it to vector of pair<int, int> instead of string as solution
         //todo: maybe changing the return value of matrixProblem to vector of states instead of string
         ISearcher<string, pair<int, int>> *bestFS = new AStarSearcher<string, pair<int, int>>();
-        return bestFS->search(&matrixProblem);
+        string result = bestFS->search(&matrixProblem);
+        delete bestFS;
+        return result;
     }
 };
 

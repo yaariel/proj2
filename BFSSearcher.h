@@ -30,8 +30,8 @@ public:
                     this->addToOpenList(successor);
                     this->addToCloseList(successor);
                 }
-
             }
+            successors.clear();
         }
         this->deleteEverything();
         return "-1";

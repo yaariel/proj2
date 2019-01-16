@@ -15,6 +15,8 @@ public:
     virtual solution search(ISearchable<T> *searchable) = 0;
 
     virtual unsigned long getNumberOfNodesEvaluated() = 0;
+
+    virtual ~ISearcher() {}
 };
 
 

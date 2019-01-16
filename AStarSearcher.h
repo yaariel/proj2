@@ -29,7 +29,7 @@ public:
             }
             State<T> *father = new State<T>(*nodeToDevelop);
             std::vector<State<T>*> successors = searchable->getPossibleNextStates(*father, *searchable->getGoalState());
-            for (auto *successor : successors) {
+            for (auto successor : successors) {
                 if (!this->isInClosedList(successor) && !this->isInOpenList(successor)) {
                     successor->setFather(father);
                     this->addToOpenList(successor);
@@ -37,6 +37,7 @@ public:
                     this->updateStatePriority(successor);
                 }
             }
+            successors.clear();
         }
         this->deleteEverything();
         return "-1";

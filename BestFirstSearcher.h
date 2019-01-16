@@ -38,6 +38,7 @@ public:
                     this->updateStatePriority(successor);
                 }
             }
+            successors.clear();
         }
         this->deleteEverything();
         return "-1";

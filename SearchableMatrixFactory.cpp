@@ -14,7 +14,8 @@ MyMatrixSearchable SearchableMatrixFactory::createMatrix(string input) {
     //allocate space for the rows in advance, for efficiency
     matrix.reserve(parsedInput.size());
     for (const auto &line : parsedInput) {
-        matrix.push_back(parseRow(line));
+        if (!line.empty())
+            matrix.push_back(parseRow(line));
     }
     pair<int, int> initPair = parseCoordinates(initData);
     double costInit = matrix[initPair.first][initPair.second];
@@ -30,7 +31,8 @@ vector<int> SearchableMatrixFactory::parseRow(const string &line) {
     string token;
     stringstream ss(line);
     while (getline(ss, token, DELIMITER)) {
-        lineAsInt.push_back(stoi(token));
+        if (!token.empty())
+            lineAsInt.push_back(stoi(token));
     }
     return lineAsInt;
 }
