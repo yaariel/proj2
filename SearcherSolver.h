@@ -16,10 +16,10 @@
 
 using namespace std;
 
-class SearcherSolver : public ISolver<vector<string>, string> {
+class SearcherSolver : public ISolver<string, string> {
 public:
 
-    virtual string solve(vector<string> problem) {
+    virtual string solve(string problem) {
         MyMatrixSearchable matrixProblem = SearchableMatrixFactory::createMatrix(problem);
         //todo: need to change it to vector of pair<int, int> instead of string as solution
         //todo: maybe changing the return value of matrixProblem to vector of states instead of string

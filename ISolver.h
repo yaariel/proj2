@@ -10,6 +10,8 @@ class ISolver {
 public:
 
     virtual Solution solve(Problem problem) = 0;
+
+    virtual ~ISolver() {}
 };
 
 

@@ -15,7 +15,7 @@
 void MyTestClientHandler::handleClient(int socket) {
 
     //enter into string the info from the socket
-    vector<string> problem;
+    string problem = "";
     string currentLine = "";
     string previousLine = "";
     string solution;
@@ -48,7 +48,7 @@ void MyTestClientHandler::handleClient(int socket) {
                     close(socket);
                     return;
                 }
-                problem.push_back(currentLine);
+                problem += currentLine + DELIMITER;
             }
             //if we have half a line, save it
             if (getline(ss, currentLine, DELIMITER))
@@ -60,7 +60,7 @@ void MyTestClientHandler::handleClient(int socket) {
 }
 
 MyTestClientHandler::~MyTestClientHandler() {
-    delete(cacheManager);
-    delete(solver);
+    delete cacheManager;
+    delete solver;
 
 }

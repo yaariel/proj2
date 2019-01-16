@@ -5,14 +5,15 @@
 #include <sstream>
 #include "SearchableMatrixFactory.h"
 
-MyMatrixSearchable SearchableMatrixFactory::createMatrix(vector<string> input) {
+MyMatrixSearchable SearchableMatrixFactory::createMatrix(string input) {
+    vector<string> parsedInput = splitInput(input);
     vector<vector<int>> matrix;
     //keeping the init and goal states separately, for convenience
-    string goalData = extractLastLine(input);
-    string initData = extractLastLine(input);
+    string goalData = extractLastLine(parsedInput);
+    string initData = extractLastLine(parsedInput);
     //allocate space for the rows in advance, for efficiency
-    matrix.reserve(input.size());
-    for (const auto &line : input) {
+    matrix.reserve(parsedInput.size());
+    for (const auto &line : parsedInput) {
         matrix.push_back(parseRow(line));
     }
     pair<int, int> initPair = parseCoordinates(initData);
@@ -49,4 +50,13 @@ pair<int, int> SearchableMatrixFactory::parseCoordinates(const string &data) {
     getline(ss, coordinate);
     second = stoi(coordinate);
     return make_pair(first, second);
+}
+
+vector<string> SearchableMatrixFactory::splitInput(const string &input) {
+    string temp;
+    vector<string> result;
+    stringstream ss(input);
+    while (getline(ss, temp))
+        result.push_back(temp);
+    return result;
 }

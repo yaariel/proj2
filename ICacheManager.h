@@ -12,6 +12,8 @@ public:
     virtual bool isSolutionSaved(Problem p) = 0;
     virtual Solution getSolution(Problem p) = 0;
     virtual void saveSolution(Problem p, Solution s) = 0;
+
+    virtual ~ICacheManager() {}
 };
 
 
