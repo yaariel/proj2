@@ -18,11 +18,11 @@ public:
 
     virtual ~MyTestClientHandler();
 
-    MyTestClientHandler(ISolver<vector<string>, string> *solver, ICacheManager<vector<string>, string> *cacheManager) : solver(solver), cacheManager(cacheManager) {}
+    MyTestClientHandler(ISolver<string, string> *solver, ICacheManager<string, string> *cacheManager) : solver(solver), cacheManager(cacheManager) {}
 
 private:
-    ISolver<vector<string>, string> *solver;
-    ICacheManager<vector<string>, string> *cacheManager;
+    ISolver<string, string> *solver;
+    ICacheManager<string, string> *cacheManager;
 };
 
 

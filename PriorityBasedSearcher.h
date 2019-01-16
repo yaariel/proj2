@@ -33,10 +33,10 @@ protected:
         return result;
     }
 
-    solution backTrace(State<T> *current, ISearchable<T> *searchable) {
+    std::queue<State<T>*> backTrace(State<T> *current, ISearchable<T> *searchable) {
         std::queue<State<T> *> trace;
         State<T> *tempState = current;
-        while (!(*tempState == searchable->getInitialState())) {
+        while (!(*tempState == *searchable->getInitialState())) {
             trace.push_front(tempState);
             tempState = tempState->getFather();
         }

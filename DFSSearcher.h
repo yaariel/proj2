@@ -12,22 +12,22 @@ template <class solution, class T>
 class DFSSearcher: public StackBasedSearcher<solution, T> {
 
 public:
-    virtual solution search(ISearchable<T> *searchable) {
-        addToOpenList(searchable->getInitialState());
+    virtual std::queue<State<T>*> search(ISearchable<T> *searchable) {
+        this->addToOpenList(searchable->getInitialState());
         //as long there is a node in the queue
         while (this->getOpenListSize() > 0) {
             State<T> *nodeToDevelop = this->popOpenList();
             if (*nodeToDevelop == *searchable->getGoalState()) {
-                return backTrace(nodeToDevelop, searchable);
+                return this->backTrace(nodeToDevelop, searchable);
             }
-            if (!isInClosedList(nodeToDevelop)) {
-                addToCloseList(nodeToDevelop);
+            if (!this->isInClosedList(nodeToDevelop)) {
+                this->addToCloseList(nodeToDevelop);
             }
 
             std::vector<State<T>*> successors = searchable->getPossibleNextStates(nodeToDevelop);
             for (auto successor : successors) {
-                if (!isInClosedList(successor) && !isInOpenList(successor)) {
-                    addToOpenList(successor);
+                if (!this->isInClosedList(successor) && !this->isInOpenList(successor)) {
+                    this->addToOpenList(successor);
                 }
             }
         }

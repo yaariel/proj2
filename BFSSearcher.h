@@ -13,20 +13,20 @@ class BFSSearcher : public QueueBasedSearcher<solution, T>{
 
 public:
 
-    virtual solution search(ISearchable<T> *searchable) {
-        addToOpenList(searchable->getInitialState());
+    virtual std::queue<State<T>*> search(ISearchable<T> *searchable) {
+        this->addToOpenList(searchable->getInitialState());
         //as long there is a node in the queue
         while (this->getOpenListSize() > 0) {
             State<T> *nodeToDevelop = this->popOpenList();
             if (*nodeToDevelop == *searchable->getGoalState()) {
-                return backTrace(nodeToDevelop, searchable);
+                return this->backTrace(nodeToDevelop, searchable);
             }
 
             std::vector<State<T>*> successors = searchable->getPossibleNextStates(nodeToDevelop);
             for (auto successor : successors) {
-                if (!isInClosedList(successor)) {
-                    addToOpenList(successor);
-                    addToCloseList(successor);
+                if (!this->isInClosedList(successor)) {
+                    this->addToOpenList(successor);
+                    this->addToCloseList(successor);
                 }
 
             }

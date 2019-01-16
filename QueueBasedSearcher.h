@@ -27,7 +27,7 @@ protected:
         return result;
     }
 
-    solution backTrace(State<T> *current, ISearchable<T> *searchable) {
+    std::queue<State<T>*> backTrace(State<T> *current, ISearchable<T> *searchable) {
         std::queue<State<T> *> trace;
         State<T> *tempState = current;
 

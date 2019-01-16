@@ -14,26 +14,26 @@ class BestFirstSearcher : public PriorityBasedSearcher<solution, T> {
 
 public:
 
-    solution search(ISearchable<T> *searchable) {
+    std::queue<State<T>*> search(ISearchable<T> *searchable) {
         //adding the initalState to the open list.
-        addToOpenList(searchable->getInitialState());
+        this->addToOpenList(searchable->getInitialState());
         while (this->getOpenListSize() > 0) {
             //start develop the node
             State<T> *nodeToDevelop = this->popOpenList();
             this->closedList.push_back(nodeToDevelop);
             //if we got to the goal
             if (*nodeToDevelop == *searchable->getGoalState()) {
-                return backTrace(nodeToDevelop, searchable);
+                return this->backTrace(nodeToDevelop, searchable);
             }
             //todo: checking if needed to change the constructor
             State<T> *father = new State<T>(*nodeToDevelop);
             std::vector<State<T>*> successors = searchable->getPossibleNextStates(father);
             for (auto *successor : successors) {
-                if (!isInClosedList(successor) && !isInOpenList(successor)) {
+                if (!this->isInClosedList(successor) && !this->isInOpenList(successor)) {
                     successor->setFather(*father);
-                    addToOpenList(successor);
-                } else if (!isInOpenList(successor)) {
-                    updateStatePriority(successor);
+                    this->addToOpenList(successor);
+                } else if (!this->isInOpenList(successor)) {
+                    this->updateStatePriority(successor);
                 }
             }
         }

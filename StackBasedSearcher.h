@@ -30,7 +30,7 @@ protected:
         return result;
     }
 
-    solution backTrace(State<T> *current, ISearchable<T> *searchable) {
+    std::queue<State<T>*> backTrace(State<T> *current, ISearchable<T> *searchable) {
         std::queue<State<T> *> trace;
         State<T> *tempState = current;
 
@@ -52,23 +52,21 @@ protected:
     }
 
     bool isInOpenList(State<T> *current) {
-        std::vector<State<T>*> temp;
+        bool isFound = false;
+        std::stack<State<T>*> temp;
         while (!openList.empty()) {
-            temp.push_back(openList.top());
+            if (openList.top() == *current) {
+                isFound = true;
+                break;
+            }
+            temp.push(openList.top());
             openList.pop();
         }
-
-        //need to be reversed
-        auto it = temp.rbegin();
-        for (; it != temp.begin(); it++) {
-            openList.push(*it);
+        while (!temp.empty()) {
+            openList.push(temp.top());
+            temp.pop();
         }
-        for (auto item : temp) {
-            if (*current == *item) {
-                return true;
-            }
-        }
-        return false;
+        return isFound;
     }
 
     bool isInClosedList(State<T> *current) {
